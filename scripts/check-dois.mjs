@@ -21,7 +21,7 @@ const DOI_PATTERN = /10\.\d{4,9}\/[^\s)\]"'<>*`]+/gu;
 const TIMEOUT_MS = 20000;
 const CONCURRENCY = 6;
 const USER_AGENT =
-  "sbcc-doi-liveness/1.0 (+https://github.com/TheGoatPsy/claude-code-for-social-scientists)";
+  "sbcc-doi-liveness/1.0 (+https://github.com/OnourImpram/claude-code-for-social-scientists)";
 
 function walk(dir, files = []) {
   if (!fs.existsSync(dir)) return files;

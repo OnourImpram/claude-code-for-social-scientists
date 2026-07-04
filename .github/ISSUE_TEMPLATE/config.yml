@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
   - name: Security vulnerability
-    url: https://github.com/TheGoatPsy/claude-code-for-social-scientists/security/policy
+    url: https://github.com/OnourImpram/claude-code-for-social-scientists/security/policy
     about: Please use the security policy for private vulnerability reports.

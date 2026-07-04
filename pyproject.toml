@@ -32,10 +32,10 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/TheGoatPsy/claude-code-for-social-scientists"
-Repository = "https://github.com/TheGoatPsy/claude-code-for-social-scientists"
-Documentation = "https://github.com/TheGoatPsy/claude-code-for-social-scientists#project-skills"
-Issues = "https://github.com/TheGoatPsy/claude-code-for-social-scientists/issues"
+Homepage = "https://github.com/OnourImpram/claude-code-for-social-scientists"
+Repository = "https://github.com/OnourImpram/claude-code-for-social-scientists"
+Documentation = "https://github.com/OnourImpram/claude-code-for-social-scientists#project-skills"
+Issues = "https://github.com/OnourImpram/claude-code-for-social-scientists/issues"
 
 [project.scripts]
 social-cc = "social_cc_plugin.cli:main"

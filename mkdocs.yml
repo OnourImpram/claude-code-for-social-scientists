@@ -3,9 +3,9 @@ site_description: >-
   A bilingual (Turkish + English) open-source guide for social scientists using
   Anthropic's Claude Code in research, teaching, and academic writing.
   Sosyal bilimciler için iki dilli açık kaynak Claude Code rehberi.
-site_url: https://thegoatpsy.github.io/claude-code-for-social-scientists/
-repo_url: https://github.com/TheGoatPsy/claude-code-for-social-scientists
-repo_name: TheGoatPsy/claude-code-for-social-scientists
+site_url: https://onourimpram.github.io/claude-code-for-social-scientists/
+repo_url: https://github.com/OnourImpram/claude-code-for-social-scientists
+repo_name: OnourImpram/claude-code-for-social-scientists
 copyright: >-
   Code: Apache-2.0 · Prose and booklets: CC-BY-NC-SA-4.0 ·
   © 2026 Onour Impram (ORCID 0000-0003-1076-3928)

@@ -140,7 +140,7 @@ The skills layer includes thirty-two Claude Code project skills under [`.claude/
 The skills ship two ways, and both read from the same `.claude/skills/` source.
 
 - **pip.** Run `pip install social-cc-plugin`, then `social-cc install` to copy the skills into your Claude configuration. Use `social-cc install --project` to write them into the current project's `.claude/skills/` instead, and `social-cc list` to see what is bundled.
-- **Claude Code plugin.** Run `/plugin marketplace add TheGoatPsy/claude-code-for-social-scientists`, then `/plugin install social-cc-plugin@claude-code-for-social-scientists`. The marketplace manifest at [`.claude-plugin/marketplace.json`](./.claude-plugin/marketplace.json) and the plugin manifest at [`.claude-plugin/plugin.json`](./.claude-plugin/plugin.json) expose the same skills.
+- **Claude Code plugin.** Run `/plugin marketplace add OnourImpram/claude-code-for-social-scientists`, then `/plugin install social-cc-plugin@claude-code-for-social-scientists`. The marketplace manifest at [`.claude-plugin/marketplace.json`](./.claude-plugin/marketplace.json) and the plugin manifest at [`.claude-plugin/plugin.json`](./.claude-plugin/plugin.json) expose the same skills.
 
 The installer code is Apache 2.0. The skill content it copies stays under CC-BY-NC-SA 4.0, so the non-commercial and attribution terms apply to the prose. See [Licensing](#licensing).
 

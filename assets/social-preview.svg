@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">Claude Code for Social Scientists social preview</title>
+  <desc id="desc">Agentic coding for researchers without methodological collapse.</desc>
+  <rect width="1280" height="640" fill="#121212"/>
+  <rect x="72" y="76" width="1136" height="488" rx="24" fill="#f6f1e8" stroke="#c9bdad" stroke-width="2"/>
+  <rect x="124" y="128" width="260" height="356" rx="14" fill="#171717"/>
+  <rect x="430" y="128" width="700" height="58" rx="8" fill="#e4dacb"/>
+  <rect x="430" y="222" width="700" height="18" rx="9" fill="#d0c4b4"/>
+  <rect x="430" y="266" width="610" height="18" rx="9" fill="#d0c4b4"/>
+  <rect x="430" y="310" width="660" height="18" rx="9" fill="#d0c4b4"/>
+  <text x="150" y="214" fill="#f6f1e8" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700">Claude Code</text>
+  <text x="150" y="264" fill="#f6f1e8" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">for Social</text>
+  <text x="150" y="314" fill="#f6f1e8" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Scientists</text>
+  <text x="430" y="418" fill="#171717" font-family="Arial, Helvetica, sans-serif" font-size="34">Agentic coding for researchers without methodological collapse.</text>
+  <text x="430" y="504" fill="#0f766e" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700">Methodology</text>
+  <text x="642" y="504" fill="#8a5a16" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700">Disclosure</text>
+  <text x="828" y="504" fill="#334155" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700">Citations</text>
+  <text x="980" y="504" fill="#8f2f32" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700">Bilingual access</text>
+  <text x="430" y="548" fill="#6b7280" font-family="Arial, Helvetica, sans-serif" font-size="22">OnourImpram</text>
+</svg>

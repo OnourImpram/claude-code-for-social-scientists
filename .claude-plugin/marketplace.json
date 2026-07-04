@@ -2,7 +2,7 @@
   "name": "claude-code-for-social-scientists",
   "owner": {
     "name": "Onour Impram",
-    "url": "https://github.com/TheGoatPsy"
+    "url": "https://github.com/OnourImpram"
   },
   "metadata": {
     "description": "The companion Claude Code plugin marketplace for the Claude Code for Social Scientists guide.",
@@ -18,7 +18,7 @@
         "name": "Onour Impram",
         "url": "https://orcid.org/0000-0003-1076-3928"
       },
-      "homepage": "https://github.com/TheGoatPsy/claude-code-for-social-scientists#project-skills",
+      "homepage": "https://github.com/OnourImpram/claude-code-for-social-scientists#project-skills",
       "license": "Apache-2.0 AND CC-BY-NC-SA-4.0",
       "keywords": [
         "claude-code",

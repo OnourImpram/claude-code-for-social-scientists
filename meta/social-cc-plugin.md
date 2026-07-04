@@ -3,7 +3,7 @@
 Install the **Claude Code for Social Scientists** project skills into your Claude configuration.
 
 This package bundles twenty Claude Code project skills that turn the booklets in
-[claude-code-for-social-scientists](https://github.com/TheGoatPsy/claude-code-for-social-scientists)
+[claude-code-for-social-scientists](https://github.com/OnourImpram/claude-code-for-social-scientists)
 into repeatable, auditable workflows for academic work. The set covers the research lifecycle:
 literature triage, regional academic access, MCP stack triage, research vault architecture, source
 passport ledgers, bilingual manuscript scaffolding, statistical consultation, qualitative coding
@@ -37,7 +37,7 @@ invent citations.
 The installer code is licensed under Apache-2.0. The bundled skill content is licensed under
 CC-BY-NC-SA-4.0, the same terms as the guide's prose: non-commercial use with attribution and
 share-alike. Full license text lives in the
-[repository](https://github.com/TheGoatPsy/claude-code-for-social-scientists).
+[repository](https://github.com/OnourImpram/claude-code-for-social-scientists).
 
 ## Citation
 

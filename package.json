@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "lint": "markdownlint-cli2 \"**/*.md\" \"#.git\" \"#node_modules\"",
-    "validate": "node scripts/validate-repo.mjs",
+    "validate": "node scripts/validate-platform.mjs",
+    "validate:legacy": "node scripts/validate-repo.mjs",
     "validate:truth": "node scripts/validate-release-truth.mjs",
     "render:agents": "node scripts/render-agents.mjs",
     "check:agents": "node scripts/render-agents.mjs --check",

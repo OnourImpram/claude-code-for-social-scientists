@@ -1,101 +1,85 @@
 # Catalog
 
-This catalog lists every booklet in `claude-code-for-social-scientists`, grouped by category, with a stable identifier of the form `KKK-AA-SSSS` (category, subcategory, serial), a short description in English and Turkish, and a status. The full long-term catalog targets forty-three booklets across fourteen categories. The v1.0 target is the **ten core booklets** marked with `[v1.0]` in the tables below. Booklet 001-01-0004 ships at `release` status in v2.0.0, booklet 008-01-0001 (Reproducible Quantitative Workflows) at `release` status in v2.1.0, and booklet 008-02-0001 (Statistical Test Selection with AI Consultation Discipline) at `release` status in v2.2.0, all after human review and all motivated by the empirical finding that quantitative data analysis is the dominant social-science use of coding agents, bringing the released total to thirteen. v2.3.0 is a prose-only revision: the Turkish text of all thirteen booklets was rewritten in the author's native voice; no booklet was added or removed. v2.4.0 is a scholarship and voice quality upgrade of all thirteen booklets in both languages: overclaims were hedged, misapplied citations were replaced with verified sources, and aggregate verified citation declarations rose from 240 to 248, with no booklet added or removed and no heading structure changed. v2.8.0 adds four booklets with verified citation cores, 007-01-0001 (IMRAD scaffolding), 007-03-0001 (journal fit and cover letters), 008-03-0001 (qualitative coding with AI assistance), and 010-02-0001 (anti-AI-trace writing for revisions), bringing the released total to seventeen. v2.9.0 adds four more, 003-03-0001 (source passport), 005-02-0001 (ritual hooks), 006-01-0001 (MCP for the researcher), and 011-01-0001 (conference materials), bringing the released total to twenty-one and giving every one of the twelve categories at least one released booklet. The remaining ten booklets are scheduled for later releases. See [`meta/roadmap.md`](./meta/roadmap.md) for the phase plan and release timing.
+<!-- release-facts: version=4.0.0 booklets=33 language_files=66 categories=14 skills=32 verified=566 fabricated=0 -->
+
+This catalog is the human readable registry of the bilingual curriculum and companion skill library. Booklet identifiers use `KKK-AA-SSSS`, where `KKK` is the category, `AA` is the subcategory, and `SSSS` is the stable serial number. Released identifiers do not change when content is revised.
+
+The long term catalog contains forty three booklets across fourteen categories. Thirty three are released as complete Turkish and English pairs. Ten remain planned. Release and platform counts are governed by [`meta/release.json`](./meta/release.json) and derived from the repository by `scripts/validate-release-truth.mjs`.
 
 ## Status legend
 
 | Symbol | Meaning |
 |---|---|
-| `draft` | Turkish or English first draft committed, awaiting bilingual completion or human review |
-| `planned` | Scoped, outlined, not yet drafted |
-| `paired` | Both `tr.md` and `en.md` drafted, not yet included in a public release |
-| `release` | Human-reviewed, version-tagged, included in a public release |
+| `planned` | Scoped in the catalog, without a released bilingual file pair |
+| `draft` | At least one working language file exists, human review is incomplete |
+| `paired` | Turkish and English files exist, release review is incomplete |
+| `release` | Turkish and English files are complete, human reviewed, and release eligible |
 
-The repository now contains thirty-three booklets at `release` status, and every one of the fourteen categories carries at least one released booklet. Both Turkish and English files are complete, human-reviewed, and citation-audited. Ten are the v1.0.0 core booklets, the eleventh, 001-01-0004, was added and human-reviewed for the v2.0.0 release, the twelfth, 008-01-0001, for the v2.1.0 release, the thirteenth, 008-02-0001, for the v2.2.0 release, the v2.8.0 release adds 007-01-0001, 007-03-0001, 008-03-0001, and 010-02-0001, and the v2.9.0 release adds 003-03-0001, 005-02-0001, 006-01-0001, and 011-01-0001, all with live-verified citation cores. Ten booklets remain at `planned` status as of 2026-06-12. The v1.1.x releases add ten companion Claude Code project skills that turn the booklets into repeatable workflows, installable through the `social-cc-plugin` pip package or the Claude Code plugin system.
+## 001. Foundations, Temeller
 
----
-
-## 001 — Foundations / Temeller
-
-The conceptual introduction. What Claude Code is, how it differs from a chat window, why the agentic shift matters for academic work, and the cultural particularities of using it from Türkiye, Greece, and other non-English ecosystems.
-
-| Identifier | Title (EN) | Title (TR) | Status |
+| Identifier | Title, English | Başlık, Türkçe | Status |
 |---|---|---|---|
-| 001-01-0001 `[v1.0]` | Claude Code Through a Social Scientist’s Lens | Sosyal Bilimcinin Gözüyle Claude Code | `release` |
-| 001-01-0002 `[v1.0]` | The Agentic Shift: From Chat Window to Working Partner | Aracın Ötesine Geçiş: Sohbet Penceresinden İş Ortağına | `release` |
+| 001-01-0001 `[v1.0]` | Claude Code Through a Social Scientist's Lens | Sosyal Bilimcinin Gözüyle Claude Code | `release` |
+| 001-01-0002 `[v1.0]` | The Agentic Shift, From Chat Window to Working Partner | Aracın Ötesine Geçiş, Sohbet Penceresinden İş Ortağına | `release` |
 | 001-01-0003 `[v1.0]` | Installation, First Session, and Sanity Checks | Kurulum, İlk Oturum ve Sağlamlık Denetimleri | `release` |
 | 001-01-0004 | CLAUDE.md and the Discipline of Standing Instructions | CLAUDE.md ve Kalıcı Talimat Disiplini | `release` |
 | 001-02-0001 | Research Lifecycle Map, From Idea to Publication, From Publication to Archive | Araştırma Yaşam Döngüsü, Fikirden Yayına, Yayından Arşive | `release` |
 
-## 002 — Academic Access / Akademik Erişim
+## 002. Academic Access, Akademik Erişim
 
-Practical access to journals, citation indexes, reference managers, and institutional infrastructure. The category most often missing from international AI guides written from Silicon Valley perspectives.
-
-| Identifier | Title (EN) | Title (TR) | Status |
+| Identifier | Title, English | Başlık, Türkçe | Status |
 |---|---|---|---|
 | 002-01-0001 | PubMed and Semantic Scholar MCPs for Working Researchers | Çalışan Araştırmacı İçin PubMed ve Semantic Scholar MCP'leri | `planned` |
 | 002-02-0001 | Zotero, ORCID, and the Reference Manager Bridge | Zotero, ORCID ve Referans Yönetim Köprüsü | `planned` |
-| 002-03-0001 | EZproxy, Institutional VPN, and Off-Campus Realities | EZproxy, Kurumsal VPN ve Kampüs Dışı Erişim | `planned` |
-| 002-04-0001 `[v1.0]` | DergiPark, ULAKBIM TR Dizin, HEAL-Link, and Regional Indexing | DergiPark, ULAKBİM TR Dizin, HEAL Link ve Bölgesel İndeksleme | `release` |
+| 002-03-0001 | EZproxy, Institutional VPN, and Off Campus Realities | EZproxy, Kurumsal VPN ve Kampüs Dışı Erişim | `planned` |
+| 002-04-0001 `[v1.0]` | DergiPark, ULAKBIM TR Dizin, HEAL Link, and Regional Indexing | DergiPark, ULAKBİM TR Dizin, HEAL Link ve Bölgesel İndeksleme | `release` |
 | 002-05-0001 | Systematic Reviews and Scoping Reviews, From Search to PRISMA Flow | Sistematik Derleme ve Kapsam Derlemesi, Aramadan PRISMA Akışına | `release` |
 
-## 003 — Memory System / Hafıza Sistemi
+## 003. Memory System, Hafıza Sistemi
 
-The Memory-as-Vault engineering pattern. How to maintain a persistent academic context across years of work, not weeks.
-
-| Identifier | Title (EN) | Title (TR) | Status |
+| Identifier | Title, English | Başlık, Türkçe | Status |
 |---|---|---|---|
-| 003-01-0001 `[v1.0]` | Memory as Vault. A First Principles Introduction | Hafızayı Arşive Dönüştürmek. İlkesel Bir Giriş | `release` |
-| 003-02-0001 | Retrieval Patterns: Indexing a Decade of Notes | Geri Çağırma Kalıpları: On Yıllık Notları İndekslemek | `planned` |
-| 003-03-0001 | Material Passport. Tracking Sources Across Sessions | Kaynak Pasaportu. Kaynakları Oturumlar Arasında İzlemek | `release` |
+| 003-01-0001 `[v1.0]` | Memory as Vault, A First Principles Introduction | Hafızayı Arşive Dönüştürmek, İlkesel Bir Giriş | `release` |
+| 003-02-0001 | Retrieval Patterns, Indexing a Decade of Notes | Geri Çağırma Kalıpları, On Yıllık Notları İndekslemek | `planned` |
+| 003-03-0001 | Material Passport, Tracking Sources Across Sessions | Kaynak Pasaportu, Kaynakları Oturumlar Arasında İzlemek | `release` |
 | 003-04-0001 | Open Science Package, Data, Code, Supplementary Files, and Persistent DOI | Açık Bilim Paketi, Veri, Kod, Ek Dosya ve Kalıcı DOI | `release` |
 
-## 004 — Vault Architecture / Kasa Mimarisi
+## 004. Vault Architecture, Arşiv Mimarisi
 
-Folder discipline, Maps of Content, Markdown conventions that survive software changes.
-
-| Identifier | Title (EN) | Title (TR) | Status |
+| Identifier | Title, English | Başlık, Türkçe | Status |
 |---|---|---|---|
-| 004-01-0001 `[v1.0]` | Folder Discipline and the Maps of Content (MOC) Pattern | Klasör Disiplini ve Maps of Content (MOC) Kalıbı | `release` |
+| 004-01-0001 `[v1.0]` | Folder Discipline and the Maps of Content Pattern | Klasör Disiplini ve İçerik Haritası Kalıbı | `release` |
 | 004-02-0001 | Markdown Conventions That Outlive Tools | Araçlardan Uzun Yaşayan Markdown Alışkanlıkları | `planned` |
 
-## 005 — Hooks and Automation / Hook'lar ve Otomasyon
+## 005. Hooks and Automation, Hook Yapıları ve Otomasyon
 
-Session lifecycle events, ritual hooks, lightweight CI for a personal knowledge base.
-
-| Identifier | Title (EN) | Title (TR) | Status |
+| Identifier | Title, English | Başlık, Türkçe | Status |
 |---|---|---|---|
-| 005-01-0001 | Hook Types: A Catalog with Working Examples | Hook Türleri: Çalışan Örneklerle Bir Katalog | `planned` |
-| 005-02-0001 | Ritual Hooks. Daily Logging, Session Persistence, and Idle Time | Ritüel Hook'lar. Günlük Kayıt, Oturum Kalıcılığı ve Boş Zaman Bakımı | `release` |
+| 005-01-0001 | Hook Types, A Catalog with Working Examples | Hook Türleri, Çalışan Örneklerle Bir Katalog | `planned` |
+| 005-02-0001 | Ritual Hooks, Daily Logging, Session Persistence, and Idle Time | Ritüel Hook Yapıları, Günlük Kayıt, Oturum Kalıcılığı ve Boş Zaman Bakımı | `release` |
 
-## 006 — MCP and Plugins / MCP ve Eklentiler
+## 006. MCP and Plugins, MCP ve Eklentiler
 
-Model Context Protocol servers, plugin marketplaces, trust evaluation of third-party academic plugins.
-
-| Identifier | Title (EN) | Title (TR) | Status |
+| Identifier | Title, English | Başlık, Türkçe | Status |
 |---|---|---|---|
-| 006-01-0001 | MCP for the Researcher. What, Why, When | Araştırmacı İçin MCP. Ne, Neden, Ne Zaman | `release` |
+| 006-01-0001 | MCP for the Researcher, What, Why, When | Araştırmacı İçin MCP, Ne, Neden, Ne Zaman | `release` |
 | 006-02-0001 | Authoring a Custom Academic MCP Server | Özel Akademik MCP Sunucusu Yazma | `planned` |
-| 006-03-0001 | Plugin Trust Triage: A Working Methodology | Eklenti Güveni Triyajı: Çalışan Bir Yöntem | `planned` |
+| 006-03-0001 | Plugin Trust Triage, A Working Methodology | Eklenti Güveni Triyajı, Çalışan Bir Yöntem | `planned` |
 
-## 007 — Academic Writing / Akademik Yazım
+## 007. Academic Writing, Akademik Yazım
 
-IMRAD scaffolding in Turkish and English, APA 7 with DOI discipline, journal fit, manuscript revision.
-
-| Identifier | Title (EN) | Title (TR) | Status |
+| Identifier | Title, English | Başlık, Türkçe | Status |
 |---|---|---|---|
-| 007-01-0001 | IMRAD Scaffolding. A Bilingual Approach | IMRAD İskeleti. İki Dilli Bir Yaklaşım | `release` |
+| 007-01-0001 | IMRAD Scaffolding, A Bilingual Approach | IMRAD İskeleti, İki Dilli Bir Yaklaşım | `release` |
 | 007-02-0001 `[v1.0]` | APA 7 with DOI Discipline | DOI Disiplini ile APA 7 | `release` |
 | 007-03-0001 | Journal Fit and Cover Letters | Dergi Uyumu ve Kapak Mektupları | `release` |
 | 007-04-0001 | Authorship and Contribution Traces, Who Did What, Where It Changed | Ortak Yazarlık ve Katkı İzleri, Kim Ne Yaptı, Nerede Değişti | `release` |
 | 007-05-0001 | Multilingual Concept Validity, Thinking Academically Between Turkish, English, and Greek | Çok Dilli Kavram Geçerliği, Türkçe, İngilizce ve Yunanca Arasında Akademik Düşünmek | `release` |
 | 007-06-0001 | Grant Proposals and Project Texts, From Idea to Work Package | Proje Başvurusu ve Hibe Metni, Fikirden İş Paketine | `release` |
 
-## 008 — Data Analysis / Veri Analizi
+## 008. Data Analysis, Veri Analizi
 
-Reproducible workflows, statistical test selection, qualitative coding, mixed-methods discipline.
-
-| Identifier | Title (EN) | Title (TR) | Status |
+| Identifier | Title, English | Başlık, Türkçe | Status |
 |---|---|---|---|
 | 008-01-0001 | Reproducible Quantitative Workflows | Yeniden Üretilebilir Nicel İş Akışları | `release` |
 | 008-02-0001 | Statistical Test Selection with AI Consultation Discipline | Yapay Zekâ Danışma Disipliniyle İstatistiksel Test Seçimi | `release` |
@@ -103,60 +87,46 @@ Reproducible workflows, statistical test selection, qualitative coding, mixed-me
 | 008-04-0001 | Preparing Sensitive Data, Anonymization, Masking, and Local Preprocessing | Hassas Veriyi Hazırlamak, Anonimleştirme, Maskeleme ve Yerel Ön İşleme | `release` |
 | 008-05-0001 | Research Protocol and Preregistration, Deciding Before Analysis | Araştırma Protokolü ve Ön Kayıt, Analizden Önce Karar Vermek | `release` |
 
-## 009 — Ethics and IRB / Etik ve IRB
+## 009. Ethics and IRB, Etik ve IRB
 
-Helsinki Declaration, COPE, WAME, ICMJE, STM 2025, EU AI Act 2024/1689 Art. 50, ENAI, KVKK, GDPR.
-
-| Identifier | Title (EN) | Title (TR) | Status |
+| Identifier | Title, English | Başlık, Türkçe | Status |
 |---|---|---|---|
-| 009-01-0001 `[v1.0]` | Ethics in AI-Assisted Research, From Principle to Behavior | Yapay Zekâ Destekli Araştırmada Etik, İlkeden Davranışa | `release` |
-| 009-02-0001 | IRB Protocols with AI Component | Yapay Zekâ Bileşenli IRB Protokolleri | `planned` |
-| 009-03-0001 | KVKK, GDPR, and the EU AI Act for Researchers | Araştırmacı İçin KVKK, GDPR ve AB AI Yasası | `planned` |
+| 009-01-0001 `[v1.0]` | Ethics in AI Assisted Research, From Principle to Behavior | Yapay Zekâ Destekli Araştırmada Etik, İlkeden Davranışa | `release` |
+| 009-02-0001 | IRB Protocols with an AI Component | Yapay Zekâ Bileşenli IRB Protokolleri | `planned` |
+| 009-03-0001 | KVKK, GDPR, and the EU AI Act for Researchers | Araştırmacı İçin KVKK, GDPR ve AB Yapay Zekâ Tüzüğü | `planned` |
 
-## 010 — Peer Review / Hakem Değerlendirmesi
+## 010. Peer Review, Hakem Değerlendirmesi
 
-Rebuttal letters with traceability matrices, reviewer-response discipline, anti-AI-trace writing.
-
-| Identifier | Title (EN) | Title (TR) | Status |
+| Identifier | Title, English | Başlık, Türkçe | Status |
 |---|---|---|---|
 | 010-01-0001 `[v1.0]` | Rebuttal Letters with Traceability Matrices | İzlenebilirlik Matrisleri ile Hakem Yanıt Mektupları | `release` |
 | 010-02-0001 | Managing AI Style Traces in Revisions | Revizyonlarda Yapay Zekâ Üslup İzini Yönetmek | `release` |
 | 010-03-0001 | AI in Peer Review, Confidentiality, Evaluation, and Boundaries | Hakemlikte Yapay Zekâ, Gizlilik, Değerlendirme ve Sınırlar | `release` |
 
-## 011 — Conference and Public Communication / Konferans ve Kamusal İletişim
+## 011. Conference and Public Communication, Konferans ve Kamusal İletişim
 
-Slides, posters, lightning talks, and communicating scholarship to the public through blogs, press, and social media.
-
-| Identifier | Title (EN) | Title (TR) | Status |
+| Identifier | Title, English | Başlık, Türkçe | Status |
 |---|---|---|---|
-| 011-01-0001 | Slides, Posters, and Lightning Talks with AI Assistance | Yapay Zekâ Yardımıyla Slayt, Poster ve Lightning Talk | `release` |
+| 011-01-0001 | Slides, Posters, and Lightning Talks with AI Assistance | Yapay Zekâ Yardımıyla Slayt, Poster ve Kısa Konuşma | `release` |
 | 011-02-0001 | Public Scholarship, Blog, Press, and Social Media | Akademik Bilgiyi Kamuya Anlatmak, Blog, Basın ve Sosyal Medya | `release` |
 
-## 012 — Troubleshooting / Sorun Giderme
+## 012. Troubleshooting, Sorun Giderme
 
-When tools fail, when papers disagree, when reviewers ask the wrong question.
-
-| Identifier | Title (EN) | Title (TR) | Status |
+| Identifier | Title, English | Başlık, Türkçe | Status |
 |---|---|---|---|
 | 012-01-0001 `[v1.0]` | When Things Go Wrong, A Working Troubleshooting Protocol | İşler Ters Gittiğinde, Çalışan Bir Sorun Giderme Protokolü | `release` |
 
-## 013 — Teaching and Supervision / Öğretim ve Süpervizyon
+## 013. Teaching and Supervision, Öğretim ve Süpervizyon
 
-Course design, reading-list verification, rubrics, feedback on student work, thesis supervision, and the limits of clinical supervision.
-
-| Identifier | Title (EN) | Title (TR) | Status |
+| Identifier | Title, English | Başlık, Türkçe | Status |
 |---|---|---|---|
 | 013-01-0001 | AI in Teaching, Course Design, Supervision, and Student Feedback | Öğretimde Yapay Zekâ, Ders Tasarımı, Süpervizyon ve Öğrenci Geri Bildirimi | `release` |
 
-## 014 — Tool Portability / Araç Taşınabilirliği
+## 014. Tool Portability, Araç Taşınabilirliği
 
-What survives a change of tool. Codex and portable agentic discipline, principles before products.
-
-| Identifier | Title (EN) | Title (TR) | Status |
+| Identifier | Title, English | Başlık, Türkçe | Status |
 |---|---|---|---|
-| 014-01-0001 | Beyond Claude Code, Codex and Portable Agentic Discipline | Claude Code’un Ötesinde, Codex ve Taşınabilir Ajan Disiplini | `release` |
-
----
+| 014-01-0001 | Beyond Claude Code, Codex and Portable Agentic Discipline | Claude Code'un Ötesinde, Codex ve Taşınabilir Ajan Disiplini | `release` |
 
 ## Summary by status
 
@@ -167,57 +137,55 @@ What survives a change of tool. Codex and portable agentic discipline, principle
 | `draft` | 0 |
 | `planned` | 10 |
 | **Total catalog** | **43** |
-| **v1.0 announcement target** | **10** (marked `[v1.0]` above) |
+| **v1.0 announcement target** | **10** |
 
 ## Companion Project Skills
 
-The v1.1.x release line adds Claude Code project skills under `.claude/skills/<skill-name>/SKILL.md`, v2.7.0 doubles the set to twenty, and v4.0 extends it to thirty-two, adding open-science release, preregistration, sensitive-data anonymization, peer-review confidentiality, multilingual concept validity, grant work-package, teaching, public-scholarship, and cross-agent workflows. These skills do not replace the booklets. They provide compact, repeatable operating protocols for the most common workflows, and every skill carries a Turkish usage section alongside its English protocol.
+The canonical skill source contains thirty two reviewed workflows. Claude Code and Codex use the same `SKILL.md` bodies through client specific discovery paths.
 
 | Skill | Booklet basis | Workflow surface |
 |---|---|---|
-| `social-science-literature-triage` | 002, 007 | Literature search scoping, database routing, language layers, DOI status, and inclusion criteria |
-| `apa-doi-verifier` | 007 | APA 7 cleanup, DOI verification, Crossref/PubMed second-pass checks, fabricated citation risk |
-| `bilingual-booklet-pairing` | all pairs | `tr.md` and `en.md` parity, title alignment, frontmatter agreement, cultural adaptation notes |
-| `ai-disclosure-auditor` | all pairs | AI contribution, model alias, model date, human review, citation counts, disclosure standard |
-| `ethics-irb-ai-protocol` | 009 | IRB, KVKK, GDPR, EU AI Act, disclosure, and data-minimization review |
-| `rebuttal-traceability-matrix` | 010 | Reviewer comment traceability, accepted/partial/rejected categories, manuscript change mapping |
-| `memory-vault-architect` | 003, 004 | Research vault architecture, MOCs, frontmatter, source passports, retrieval patterns |
-| `regional-access-workflow` | 002 | DergiPark, ULAKBIM TR Dizin, HEAL-Link, YOK Thesis Center, and institutional access workflows |
-| `agentic-session-debugger` | 012 | Scope drift, loop trap, hidden state, context limit, PATH, and permission troubleshooting |
-| `repo-release-integrity-check` | whole repo | README, CATALOG, CHANGELOG, CITATION.cff, Zenodo DOI, release notes, AI disclosure, and booklet frontmatter alignment |
-| `anti-ai-trace-revision` | 010 | Two-layer de-AI revision, rhetorical de-patterning, naturalness and calque repair, frozen-list verification |
-| `bilingual-manuscript-scaffold` | 007 | Claim skeleton, IMRAD scaffolding, Turkish-first drafting, English re-authoring, section parity checks |
-| `journal-fit-screening` | 007 | Venue scope match, index verification against master lists, predatory screening, cover letter drafting |
-| `qualitative-coding-discipline` | 008 | Codebook ownership, AI as second coder, intercoder agreement, quote integrity, reflexivity log |
-| `statistical-consultation-protocol` | 008 | Inferential question first, assumption checks on real data, decision log, APA results reporting |
-| `research-ritual-hooks` | 005 | Session lifecycle hooks, context injection, daily logging, fail-open and fail-closed guard design |
-| `research-lifecycle-pipeline` | 001, all | Stage diagnosis, skill routing, boundary confirmations, verification-before-disclosure ordering |
-| `mcp-research-stack-triage` | 006 | MCP server trust triage, data flow questions, minimal permissions, known-answer probes |
-| `source-passport-ledger` | 003 | Per-source passports, lifecycle-event updates, citation quarantine rule, pre-submission sweeps |
-| `conference-materials-bilingual` | 011 | One-claim decks and posters, figure traceability, bilingual re-authoring, rehearsal cut lists |
-| `prisma-scoping-review-pipeline` | 002 | Systematic, scoping, and rapid review pipeline, framing scheme, logged search, screening with reasons, PRISMA counts |
-| `sensitive-data-anonymization-gate` | 008, 009 | De-identification and data-minimization gate before any AI tool sees sensitive, clinical, or raw interview data |
-| `open-science-release-packager` | 003 | Open-science release, license choice, persistent DOI, README and metadata, access and embargo decision |
-| `authorship-contribution-ledger` | 007 | Authorship order, CRediT roles, AI-assistance attribution, contributorship statement, dispute evidence trail |
-| `peer-review-confidentiality-protocol` | 010 | Confidentiality-preserving peer review, whether and how AI may assist, reviewer disclosure |
-| `multilingual-concept-validity-audit` | 007 | Construct equivalence across Turkish and English, translation and back-translation, construct drift |
-| `grant-proposal-workpackage-builder` | 007 | Work packages, milestones, deliverables, timeline, risk register, budget-justification scaffolding |
-| `teaching-feedback-ai-boundaries` | 013 | Course, assessment, and student-feedback AI boundaries, academic integrity, FERPA and KVKK limits |
-| `public-scholarship-ethics-adapter` | 011 | Adapting findings for public audiences, evidence-faithful simplification, embargo respect, AI disclosure |
-| `preregistration-analysis-plan-ledger` | 008 | Preregistration, frozen analysis plan, confirmatory and exploratory separation, deviation log |
-| `agent-portability-matrix` | 014 | Cross-tool portability matrix of capabilities, file access, memory, and skill support |
-| `cross-agent-second-opinion` | 014, 012 | A second independent agent verifies rather than decides, agent disagreement surfaced for the human |
+| `social-science-literature-triage` | 002, 007 | Literature scope, database routing, language layers, source status, and inclusion logic |
+| `apa-doi-verifier` | 007 | APA 7 structure, DOI identity, metadata verification, and fabricated citation risk |
+| `bilingual-booklet-pairing` | all pairs | Turkish and English structure, frontmatter, citations, and adaptation parity |
+| `ai-disclosure-auditor` | all pairs | AI contribution, model metadata, human review, citation counts, and disclosure |
+| `ethics-irb-ai-protocol` | 009 | Ethics, privacy, data minimization, institutional review, and disclosure questions |
+| `rebuttal-traceability-matrix` | 010 | Reviewer comment, response, evidence, manuscript change, and status mapping |
+| `memory-vault-architect` | 003, 004 | Research folders, maps of content, metadata, source passports, and retrieval |
+| `regional-access-workflow` | 002 | Regional and institutional literature access routes |
+| `agentic-session-debugger` | 012 | Scope, context, permissions, paths, loops, and host state diagnosis |
+| `repo-release-integrity-check` | repository | Release metadata, counts, citations, packaging, and public claim alignment |
+| `anti-ai-trace-revision` | 010 | Author voice revision with evidence and disclosure protection |
+| `bilingual-manuscript-scaffold` | 007 | Claim architecture, Turkish drafting, English adaptation, and section parity |
+| `journal-fit-screening` | 007 | Scope fit, index verification, policy review, and predatory risk |
+| `qualitative-coding-discipline` | 008 | Human led coding, reflexivity, quote integrity, negative cases, and audit trail |
+| `statistical-consultation-protocol` | 008 | Design, estimand, assumptions, effect sizes, uncertainty, and reporting |
+| `research-ritual-hooks` | 005 | Bounded lifecycle automation, logging, and research session checks |
+| `research-lifecycle-pipeline` | 001, all | Lightweight stage diagnosis and skill routing |
+| `mcp-research-stack-triage` | 006 | MCP publisher, data flow, permissions, trust, and known answer behavior |
+| `source-passport-ledger` | 003 | Source discovery, access, identity, verification, claims, and citation status |
+| `conference-materials-bilingual` | 011 | Evidence traceable bilingual slides, posters, and talks |
+| `prisma-scoping-review-pipeline` | 002 | Logged search, screening, exclusions, extraction, and PRISMA counts |
+| `sensitive-data-anonymization-gate` | 008, 009 | Data minimization, deidentification, classification, and access decision support |
+| `open-science-release-packager` | 003 | Code, data decisions, metadata, licensing, DOI, embargo, and release materials |
+| `authorship-contribution-ledger` | 007 | Authorship order, CRediT roles, evidence, disputes, and AI assistance |
+| `peer-review-confidentiality-protocol` | 010 | Confidentiality preserving decisions about AI assisted peer review |
+| `multilingual-concept-validity-audit` | 007 | Construct equivalence, translation decisions, cultural adaptation, and drift |
+| `grant-proposal-workpackage-builder` | 007 | Work packages, milestones, risks, dependencies, and budget logic |
+| `teaching-feedback-ai-boundaries` | 013 | AI boundaries for course design, assessment, supervision, and feedback |
+| `public-scholarship-ethics-adapter` | 011 | Public communication with evidence, uncertainty, and embargo protection |
+| `preregistration-analysis-plan-ledger` | 008 | Confirmatory decisions, estimands, exclusions, analyses, and deviations |
+| `agent-portability-matrix` | 014 | Host capabilities, file access, memory, permissions, and migration risk |
+| `cross-agent-second-opinion` | 014, 012 | Independent verification and disagreement for human adjudication |
+
+Detailed responsibilities and handoffs are maintained in [`docs/SKILL_RESPONSIBILITY_AND_HANDOFF_MATRIX.md`](./docs/SKILL_RESPONSIBILITY_AND_HANDOFF_MATRIX.md).
 
 ## Versioning
 
-Booklet identifiers (`KKK-AA-SSSS`) are immutable. A booklet's content version is tracked in its own frontmatter (`version` field) and in this catalog at release time. Revisions to a booklet keep the identifier and increment the booklet version.
+Booklet identifiers are immutable. Content versions are recorded in frontmatter and release notes. Zenodo mints a version DOI after a GitHub release and the concept DOI resolves to the latest archived version.
 
-When this repository is tagged for release (for example `v0.1.0-alpha`, `v1.0.0`, `v1.1.1`, or `v1.5.0`), the release notes reference the booklet identifiers and content versions included in the release. Zenodo mints a new DOI after each GitHub release is published. The concept DOI in `CITATION.cff` resolves to the latest version, and individual version DOIs are available on Zenodo after the release event.
+## Proposing a booklet
 
-## How to propose a new booklet
+Review [`CONTRIBUTING.md`](./CONTRIBUTING.md) or [`CONTRIBUTING.tr.md`](./CONTRIBUTING.tr.md). Proposals should name the next available identifier, define the audience and methodological responsibility, explain the bilingual plan, identify human authority boundaries, and state how claims and citations will be verified.
 
-See [`CONTRIBUTING.md`](./CONTRIBUTING.md). The short version. Open an issue with a proposed identifier (next free serial in the relevant category), a one-paragraph scope, and a draft outline. The maintainer triages new booklets monthly.
-
----
-
-**Last updated:** 2026-06-21 (v3.2.0 release: twelve continuation booklets expanded bilingually from the author's source drafts, opening two new categories, 013 Teaching and Supervision and 014 Tool Portability, and extending six existing ones, raising the released catalog to thirty-three booklets across fourteen categories and aggregate verified citation declarations from 354 to 566 with zero fabricated, every reference verified live against Crossref and doi.org. Earlier: v3.1.0 release: a full bilingual content overhaul of all twenty-one booklets, the Turkish rebuilt from the author's hand-revised sources and the English natively re-authored, shipped with the academic-journal site redesign. Earlier: v3.0.0 release: the JOSE paper refreshed to the twenty-one-booklet, twenty-skill surface with a fifth distinctive contribution on anti-AI-trace revision, plus a submission readiness checklist and a draft-PDF compile workflow. No booklet content changed, aggregate metrics unchanged at 354 verified declarations, 0 fabricated, 21 booklets at release status. Earlier the same day: v2.9.0 release: four new booklets drafted bilingually with live-verified citation cores, 003-03-0001 Material Passport, 005-02-0001 Ritual Hooks, 006-01-0001 MCP for the Researcher, and 011-01-0001 Slides Posters and Lightning Talks, raising released booklets from seventeen to twenty-one, filling all twelve categories with at least one released booklet, and raising aggregate verified citation declarations from 306 to 354 with zero fabricated. Earlier the same day: v2.8.0 release: four new booklets drafted bilingually with live-verified citation cores, 007-01-0001 IMRAD Scaffolding, 007-03-0001 Journal Fit and Cover Letters, 008-03-0001 Qualitative Coding with AI Assistance and Human Oversight, and 010-02-0001 Anti-AI-Trace Writing for Revisions, raising released booklets from thirteen to seventeen and aggregate verified citation declarations from 248 to 306 with zero fabricated. Earlier the same day: v2.7.0 release: the companion project skill set doubled from ten to twenty, covering the research lifecycle from literature scoping to release integrity, with a mandatory Turkish usage section added to every skill and the existing ten strengthened and taken through the v2.6.0 technical-register de-AI pass. Infrastructure repaired: a social-cc doctor command, a Python test job in CI, and a version single-source fix. No booklet was added or changed, aggregate metrics unchanged at 248 verified declarations, 0 fabricated, 13 booklets at release status. Earlier: v2.6.0 release: a bilingual language and naturalness pass over the website and all thirteen booklets in both Turkish and English, removing machine-writing rhetorical patterns and concept-level calques, the Turkish Vault metaphor rendered as arşiv, content and citations unchanged, bilingual parity preserved, aggregate metrics unchanged at 248 verified declarations, 0 fabricated, 13 booklets at release status. Earlier: v2.5.0 release: Turkish-language voice revision, prose only. The Turkish prose of all thirteen booklets, the companion website, and the Turkish README and CONTRIBUTING was rewritten in the author's academic voice. Terminology locked to correct forms: ifşa replaced with katkı beyanı, ajansal with ajan tabanlı, broşür with kitapçık, komponent with bileşen, konsolidasyon with bütünleşme, manüskri with makale. AI-disclosure framing enriched: a declaration alone is not enough, the manner and extent of AI use must be explained. No booklet was added or removed and no citation changed. Aggregate metrics unchanged: 248 verified declarations, 0 fabricated, 13 booklets at release status. Earlier: v2.4.0 release: a scholarship and voice quality upgrade of all thirteen booklets in both languages, overclaims hedged, misapplied citations replaced with verified sources, verified declarations risen from 240 to 248, zero fabricated, no booklet added or removed, no heading structure changed. Earlier: v2.3.0 release: Turkish-language quality revision, the prose of all thirteen booklets rewritten in the author's native voice, no booklet added or removed. Earlier the same day: v2.2.0 release with booklet 008-02-0001, v2.1.0 release with booklet 008-01-0001, and v2.0.0 release with audit and CI hardening, booklet 001-01-0004 promoted to release, companion website, and JOSE paper)
+**Last updated:** 2026-07-16. The catalog is aligned with v4.0.0 release metadata and the thirty two skill dual client platform surface.

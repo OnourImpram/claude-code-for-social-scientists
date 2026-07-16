@@ -53,7 +53,7 @@ function parseFrontmatter(content, filePath) {
     if (!scalar) continue;
     values.set(
       scalar[1],
-      scalar[2].trim().replace(/^['"]|['"]$/gu, ""),
+      scalar[2].trim().replace(/^[\'"]|[\'"]$/gu, ""),
     );
   }
   return values;
@@ -201,7 +201,7 @@ function extractDois(content) {
     .replace(/```[\s\S]*?```/gu, "")
     .replace(/~~~[\s\S]*?~~~/gu, "");
   const dois = new Set();
-  const pattern = /https?:\/\/(?:dx\.)?doi\.org\/([^\s)\]>"']/giu;
+  const pattern = /https?:\/\/(?:dx\.)?doi\.org\/([^\s)\]>"']+)/giu;
   for (const match of prose.matchAll(pattern)) {
     dois.add(match[1].replace(/[.,;:]+$/u, "").toLowerCase());
   }
@@ -277,7 +277,12 @@ function validateBookletPairs() {
     const trDois = extractDois(trContent);
     const enDois = extractDois(enContent);
     if (JSON.stringify(trDois) !== JSON.stringify(enDois)) {
-      fail(`${relative(directory)} has DOI parity drift between Turkish and English`);
+      const onlyTr = trDois.filter((doi) => !enDois.includes(doi));
+      const onlyEn = enDois.filter((doi) => !trDois.includes(doi));
+      const details = [];
+      if (onlyTr.length > 0) details.push(`only in tr.md: ${onlyTr.join(", ")}`);
+      if (onlyEn.length > 0) details.push(`only in en.md: ${onlyEn.join(", ")}`);
+      fail(`${relative(directory)} has DOI parity drift (${details.join("; ")})`);
     }
     if (trMeta.get("status") === "release") releasePairs += 1;
   }

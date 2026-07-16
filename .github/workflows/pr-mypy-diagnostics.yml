@@ -1,0 +1,56 @@
+name: PR Mypy Diagnostics
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  diagnostics:
+    if: github.head_ref == 'upgrade/social-scientist-dual-client-agent'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Setup Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install package and mypy
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e . mypy
+
+      - name: Run mypy and comment
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        shell: bash
+        run: |
+          set +e
+          mypy --strict src tests > /tmp/mypy.log 2>&1
+          status=$?
+          {
+            echo '<!-- social-cc-mypy-diagnostics -->'
+            echo '## Strict Mypy diagnostic'
+            echo
+            echo "Exit: ${status}"
+            echo
+            echo '```text'
+            cat /tmp/mypy.log
+            echo '```'
+          } > /tmp/comment.md
+          gh pr comment "$PR_NUMBER" --body-file /tmp/comment.md

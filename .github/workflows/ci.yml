@@ -145,4 +145,7 @@ jobs:
         run: npm run check:agents
 
       - name: Validate GitHub Actions pins
-        run: node scripts/check-action-pins.mjs
+        run: npm run check:actions
+
+      - name: Validate bilingual routing and agent scenarios
+        run: npm run check:evaluation

@@ -78,10 +78,10 @@ Do not invent a source, DOI, statistic, participant detail, ethical approval, re
 
 Do not convert:
 
-1. Association into causation.
+1. association into causation.
 2. Statistical significance into practical importance.
 3. User satisfaction into intervention efficacy.
-4. Qualitative frequency into population prevalence.
+4. qualitative frequency into population prevalence.
 5. A model suggestion into a scientific finding.
 6. An unverified citation into a bibliography entry.
 7. A draft into a final submission.

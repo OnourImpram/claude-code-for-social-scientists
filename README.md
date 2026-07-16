@@ -210,11 +210,11 @@ Network dependent DOI and external link checks are separate from deterministic p
 
 Code, configuration, validators, renderers, and installer logic are licensed under Apache 2.0. Skill prose, booklets, educational guides, and templates are licensed under CC BY NC SA 4.0 unless a file states otherwise. Generated adapters inherit the license of their canonical source.
 
-See [`LICENSE`](./LICENSE), [`LICENSE.code`](./LICENSE.code), and [`LICENSE.content`](./LICENSE.content).
+See [`LICENSE`](./LICENSE), <a href="./LICENSE.code">LICENSE.code</a>, and <a href="./LICENSE.content">LICENSE.content</a>.
 
 ## Citation
 
-Use the machine readable record in [`CITATION.cff`](./CITATION.cff) or GitHub's citation interface. The Zenodo concept DOI is **10.5281/zenodo.20289687** and resolves to the latest archived version. The current version DOI recorded for v4.0.0 is **10.5281/zenodo.20789730**.
+Use the machine readable record in <a href="./CITATION.cff">CITATION.cff</a> or GitHub's citation interface. The Zenodo concept DOI is **10.5281/zenodo.20289687** and resolves to the latest archived version. The current version DOI recorded for v4.0.0 is **10.5281/zenodo.20789730**.
 
 ## Contributing
 

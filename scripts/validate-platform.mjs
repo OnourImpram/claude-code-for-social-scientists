@@ -53,7 +53,7 @@ function parseFrontmatter(content, filePath) {
     if (!scalar) continue;
     values.set(
       scalar[1],
-      scalar[2].trim().replace(/^[\'"]|[\'"]$/gu, ""),
+      scalar[2].trim().replace(/^['"]|['"]$/gu, ""),
     );
   }
   return values;

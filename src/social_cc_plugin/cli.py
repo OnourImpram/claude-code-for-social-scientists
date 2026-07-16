@@ -19,7 +19,7 @@ import shutil
 import sys
 import tempfile
 import uuid
-from collections.abc import Iterator
+from collections.abc import Iterator, Mapping
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from importlib import resources
@@ -612,7 +612,7 @@ def _target_root(project: bool) -> Path:
 def doctor_report(
     target_root: Path,
     bundled: list[str] | None,
-    tools: dict[str, str | None],
+    tools: Mapping[str, str | None],
     *,
     python_ok: bool,
 ) -> tuple[list[str], int]:

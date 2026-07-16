@@ -29,6 +29,7 @@ jobs:
           set -euo pipefail
           python - <<'PY'
           from pathlib import Path
+          import re
 
           report = Path('docs/TEN_LOOP_ENGINEERING_REPORT.md')
           report_text = report.read_text(encoding='utf-8')
@@ -63,15 +64,11 @@ jobs:
 
           validator = Path('scripts/validate-platform.mjs')
           validator_text = validator.read_text(encoding='utf-8')
-          old_extract = '''function extractDois(content) {
-            const dois = new Set();
-            const pattern = /https?:\\/\\/(?:dx\\.)?doi\\.org\\/([^\\s)\\]>"']/giu;
-            for (const match of content.matchAll(pattern)) {
-              dois.add(match[1].replace(/[.,;:]+$/u, "").toLowerCase());
-            }
-            return [...dois].sort();
-          }'''
-          new_extract = '''function extractDois(content) {
+          extractor_pattern = re.compile(
+              r'function extractDois\(content\) \{\n.*?\n\}\n\nfunction validateBookletPairs',
+              re.DOTALL,
+          )
+          new_extractor = '''function extractDois(content) {
             const prose = content
               .replace(/^---\\r?\\n[\\s\\S]*?\\r?\\n---\\r?\\n/u, "")
               .replace(/```[\\s\\S]*?```/gu, "")
@@ -82,12 +79,17 @@ jobs:
               dois.add(match[1].replace(/[.,;:]+$/u, "").toLowerCase());
             }
             return [...dois].sort();
-          }'''
-          if old_extract not in validator_text:
-              raise SystemExit('expected DOI extractor was not found')
-          validator.write_text(
-              validator_text.replace(old_extract, new_extract, 1), encoding='utf-8'
+          }
+
+          function validateBookletPairs'''
+          validator_text, replacements = extractor_pattern.subn(
+              lambda _match: new_extractor,
+              validator_text,
+              count=1,
           )
+          if replacements != 1:
+              raise SystemExit(f'expected one DOI extractor, found {replacements}')
+          validator.write_text(validator_text, encoding='utf-8')
 
           Path('.github/workflows/pr-diagnostics.yml').unlink()
           Path('.github/workflows/pr-remediation.yml').unlink()

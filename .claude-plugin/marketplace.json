@@ -5,29 +5,32 @@
     "url": "https://github.com/OnourImpram"
   },
   "metadata": {
-    "description": "The companion Claude Code plugin marketplace for the Claude Code for Social Scientists guide.",
+    "description": "The Claude Code plugin marketplace for a bilingual social science curriculum, 32 reviewed research skills, and a Social Scientist Agent. The repository also provides a separate cross-client installer for Codex skills.",
     "version": "4.0.0"
   },
   "plugins": [
     {
       "name": "social-cc-plugin",
       "source": "./",
-      "description": "Thirty-two project skills for social science research with Claude Code, covering the research lifecycle from literature triage and regional access through bilingual drafting, analysis discipline, citation verification, and AI disclosure to review response and release integrity. Each skill carries a Turkish usage section alongside its English protocol.",
+      "description": "A bilingual Turkish and English Claude Code toolkit with 32 reviewed social science skills and a Social Scientist Agent for evidence verification, methodological discipline, privacy, reproducibility, writing, peer review, teaching, and open science.",
       "version": "4.0.0",
       "author": {
         "name": "Onour Impram",
         "url": "https://orcid.org/0000-0003-1076-3928"
       },
-      "homepage": "https://github.com/OnourImpram/claude-code-for-social-scientists#project-skills",
+      "homepage": "https://github.com/OnourImpram/claude-code-for-social-scientists",
       "license": "Apache-2.0 AND CC-BY-NC-SA-4.0",
       "keywords": [
         "claude-code",
+        "agent-skills",
         "social-science",
-        "academic-writing",
         "research-methods",
+        "academic-writing",
+        "research-integrity",
+        "bilingual",
+        "turkish",
         "ai-ethics",
-        "apa7",
-        "skills"
+        "open-science"
       ]
     }
   ]

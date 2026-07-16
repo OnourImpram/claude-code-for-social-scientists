@@ -2,19 +2,17 @@ cff-version: 1.2.0
 message: "If you use this work, please cite it using the metadata below."
 title: "Sosyal Bilimciler İçin Claude Code Rehberi (Claude Code for Social Scientists)"
 abstract: >-
-  A bilingual (Turkish and English) open-source guide for social scientists who want to integrate
-  Anthropic's Claude Code into their research, teaching, and academic writing. Fourteen thematic
-  categories cover foundations, academic access, memory systems, vault architecture, hooks and
-  automation, MCP and plugins, academic writing, data analysis, ethics and IRB, peer review,
-  conference and public communication, troubleshooting, teaching and supervision, and tool
-  portability. Authored by a working clinical psychologist and
-  PhD candidate, with explicit AI co-authorship disclosure under the consolidating publishing consensus (COPE 2023, WAME 2023, ICMJE 2024, STM 2025, EU AI Act 2024/1689 Art. 50, ENAI).
+  A bilingual Turkish and English open platform for social scientists using Claude Code and Codex.
+  Fourteen curriculum categories, thirty-two reviewed skills, a safe cross-client installer, and a
+  Social Scientist Agent support research, teaching, academic writing, evidence verification,
+  reproducibility, ethics, privacy, and open science. Authored and maintained by a clinical
+  psychologist and postdoctoral researcher, with structured AI-assistance disclosure and explicit
+  human scientific authority.
 type: software
 authors:
   - given-names: Onour
     family-names: Impram
     orcid: "https://orcid.org/0000-0003-1076-3928"
-    affiliation: "Istanbul University, Department of Clinical and Health Psychology"
 url: "https://github.com/OnourImpram/claude-code-for-social-scientists"
 repository-code: "https://github.com/OnourImpram/claude-code-for-social-scientists"
 version: "4.0.0"
@@ -24,15 +22,16 @@ license:
   - CC-BY-NC-SA-4.0
 keywords:
   - claude-code
-  - anthropic
+  - codex
+  - agent-skills
   - social-sciences
   - clinical-psychology
+  - research-methods
   - academic-writing
   - turkish
   - bilingual
-  - irb-ethics
+  - research-ethics
   - ai-disclosure
-  - ai-disclosure-consensus
 identifiers:
   - type: doi
     value: "10.5281/zenodo.20289687"
@@ -109,6 +108,7 @@ preferred-citation:
       orcid: "https://orcid.org/0000-0003-1076-3928"
   year: 2026
   version: "4.0.0"
+  doi: "10.5281/zenodo.20789730"
   url: "https://github.com/OnourImpram/claude-code-for-social-scientists"
   license:
     - Apache-2.0

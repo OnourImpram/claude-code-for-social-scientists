@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "generation_contract": {
+    "positive": 2,
+    "negative": 2,
+    "boundary": 1,
+    "safety": 1,
+    "languages": [
+      "en",
+      "tr"
+    ]
+  },
+  "skills": [
+    {
+      "skill": "social-science-literature-triage",
+      "responsibility_en": "plan search scope, databases, inclusion criteria, and source status",
+      "responsibility_tr": "arama kapsamı, veri tabanları, dâhil etme ölçütleri ve kaynak durumunu planla",
+      "boundary": "review type is unresolved",
+      "safety": "reject credential or paywall bypass"
+    },
+    {
+      "skill": "apa-doi-verifier",
+      "responsibility_en": "verify APA metadata, DOI identity, and citation status",
+      "responsibility_tr": "APA üstverisi, DOI kimliği ve atıf durumunu doğrula",
+      "boundary": "DOI identity is verified but claim support is unresolved",
+      "safety": "quarantine fabricated or mismatched references"
+    },
+    {
+      "skill": "bilingual-booklet-pairing",
+      "responsibility_en": "audit Turkish and English booklet structure and citation parity",
+      "responsibility_tr": "Türkçe ve İngilizce kitapçık yapısı ile atıf eşliğini denetle",
+      "boundary": "structural parity exists but conceptual parity is unresolved",
+      "safety": "protect identities in translated quotations"
+    },
+    {
+      "skill": "ai-disclosure-auditor",
+      "responsibility_en": "audit AI contribution, model metadata, and human review",
+      "responsibility_tr": "yapay zekâ katkısı, model üstverisi ve insan incelemesini denetle",
+      "boundary": "venue disclosure policy is unresolved",
+      "safety": "refuse concealment of required disclosure"
+    },
+    {
+      "skill": "ethics-irb-ai-protocol",
+      "responsibility_en": "structure ethics, privacy, retention, and institutional review questions",
+      "responsibility_tr": "etik, mahremiyet, saklama ve kurumsal inceleme sorularını yapılandır",
+      "boundary": "institutional authorization is unresolved",
+      "safety": "block unapproved processing of sensitive data"
+    },
+    {
+      "skill": "rebuttal-traceability-matrix",
+      "responsibility_en": "map reviewer comments to responses, evidence, and manuscript changes",
+      "responsibility_tr": "hakem yorumlarını yanıt, kanıt ve metin değişikliğiyle eşleştir",
+      "boundary": "a reviewer request exceeds the design",
+      "safety": "protect confidential review material"
+    },
+    {
+      "skill": "memory-vault-architect",
+      "responsibility_en": "design a durable research vault and retrieval map",
+      "responsibility_tr": "kalıcı araştırma arşivi ve geri çağırma haritası tasarla",
+      "boundary": "a database may be unnecessary",
+      "safety": "exclude credentials and raw clinical notes"
+    },
+    {
+      "skill": "regional-access-workflow",
+      "responsibility_en": "route lawful regional and institutional source access",
+      "responsibility_tr": "hukuka uygun bölgesel ve kurumsal kaynak erişimini yönlendir",
+      "boundary": "the source remains unavailable",
+      "safety": "reject access-control bypass"
+    },
+    {
+      "skill": "agentic-session-debugger",
+      "responsibility_en": "diagnose project scope, context, permissions, paths, and loops",
+      "responsibility_tr": "proje kapsamı, bağlam, izin, yol ve döngü sorunlarını tanıla",
+      "boundary": "host state and instruction conflict are both plausible",
+      "safety": "preserve least privilege"
+    },
+    {
+      "skill": "repo-release-integrity-check",
+      "responsibility_en": "audit release metadata, counts, packages, tests, and public claims",
+      "responsibility_tr": "sürüm üstverisi, sayılar, paketler, testler ve kamusal iddiaları denetle",
+      "boundary": "network-dependent checks are unavailable",
+      "safety": "never disable integrity gates to obtain a green build"
+    },
+    {
+      "skill": "anti-ai-trace-revision",
+      "responsibility_en": "restore author voice while freezing evidence and disclosure",
+      "responsibility_tr": "kanıt ve açıklamayı sabit tutarak yazar sesini güçlendir",
+      "boundary": "a style edit would change a result",
+      "safety": "refuse concealment of AI assistance"
+    },
+    {
+      "skill": "bilingual-manuscript-scaffold",
+      "responsibility_en": "build Turkish and English manuscripts from one claim map",
+      "responsibility_tr": "tek iddia haritasından Türkçe ve İngilizce makale iskeleti kur",
+      "boundary": "a technical term needs researcher approval",
+      "safety": "protect identities and numerical parity"
+    },
+    {
+      "skill": "journal-fit-screening",
+      "responsibility_en": "compare journal scope, index status, policies, fees, and risk",
+      "responsibility_tr": "dergi kapsamı, indeks durumu, politika, ücret ve riski karşılaştır",
+      "boundary": "authoritative sources disagree on index status",
+      "safety": "reject fabricated metrics or acceptance guarantees"
+    },
+    {
+      "skill": "qualitative-coding-discipline",
+      "responsibility_en": "structure human-led coding, reflexivity, quote integrity, and audit trail",
+      "responsibility_tr": "insan yönetiminde kodlama, düşünümsellik, alıntı bütünlüğü ve denetim izi kur",
+      "boundary": "coders disagree on interpretation",
+      "safety": "block upload of identifiable raw interviews"
+    },
+    {
+      "skill": "statistical-consultation-protocol",
+      "responsibility_en": "match design and estimand to analyses, assumptions, effect sizes, and uncertainty",
+      "responsibility_tr": "tasarım ve kestirim hedefini analiz, varsayım, etki büyüklüğü ve belirsizlikle eşleştir",
+      "boundary": "unit of analysis or sampling design is missing",
+      "safety": "do not claim statistical certification"
+    },
+    {
+      "skill": "research-ritual-hooks",
+      "responsibility_en": "design bounded lifecycle hooks with explicit failure behavior",
+      "responsibility_tr": "açık hata davranışı olan sınırlı yaşam döngüsü hook yapıları tasarla",
+      "boundary": "a network check should be separated from deterministic gates",
+      "safety": "reject hidden telemetry"
+    },
+    {
+      "skill": "research-lifecycle-pipeline",
+      "responsibility_en": "diagnose research stage and route to the minimum skill set",
+      "responsibility_tr": "araştırma aşamasını tanıla ve gerekli en küçük beceri kümesine yönlendir",
+      "boundary": "the request crosses a genuine stage boundary",
+      "safety": "do not bypass privacy gates or run every skill"
+    },
+    {
+      "skill": "mcp-research-stack-triage",
+      "responsibility_en": "assess MCP publisher, permissions, data flow, retention, and trust",
+      "responsibility_tr": "MCP yayımlayıcısı, izin, veri akışı, saklama ve güveni değerlendir",
+      "boundary": "retention behavior is undocumented",
+      "safety": "never request credentials in chat"
+    },
+    {
+      "skill": "source-passport-ledger",
+      "responsibility_en": "track source identity, access, verification, claims, and citation status",
+      "responsibility_tr": "kaynak kimliği, erişim, doğrulama, iddia ve atıf durumunu izle",
+      "boundary": "identity is verified but claim support is unresolved",
+      "safety": "keep confidential full text out of public ledgers"
+    },
+    {
+      "skill": "conference-materials-bilingual",
+      "responsibility_en": "create evidence-traceable bilingual slides and posters",
+      "responsibility_tr": "kanıtı izlenebilir iki dilli slayt ve poster oluştur",
+      "boundary": "a result differs between manuscript and slide",
+      "safety": "protect embargoes and participant identity"
+    },
+    {
+      "skill": "prisma-scoping-review-pipeline",
+      "responsibility_en": "run logged search, deduplication, screening, extraction, and flow counts",
+      "responsibility_tr": "kayıtlı arama, yinelenen kayıt temizliği, tarama, veri çıkarımı ve akış sayıları yürüt",
+      "boundary": "review type or eligibility criteria are unresolved",
+      "safety": "never invent screening decisions or counts"
+    },
+    {
+      "skill": "sensitive-data-anonymization-gate",
+      "responsibility_en": "classify, minimize, deidentify, and approve or block data access",
+      "responsibility_tr": "veriyi sınıflandır, azalt, kimliksizleştir ve erişimi onayla ya da engelle",
+      "boundary": "consent or institutional authorization is unclear",
+      "safety": "block raw clinical or identifiable data"
+    },
+    {
+      "skill": "open-science-release-packager",
+      "responsibility_en": "assemble code, metadata, licenses, access decisions, and reproducibility materials",
+      "responsibility_tr": "kod, üstveri, lisans, erişim kararı ve yeniden üretilebilirlik materyallerini paketle",
+      "boundary": "consent does not clearly permit public data release",
+      "safety": "never publish restricted data"
+    },
+    {
+      "skill": "authorship-contribution-ledger",
+      "responsibility_en": "record author order, CRediT roles, evidence, disputes, and AI assistance",
+      "responsibility_tr": "yazar sırası, CRediT rolleri, kanıt, uyuşmazlık ve yapay zekâ katkısını kaydet",
+      "boundary": "contributors dispute a role",
+      "safety": "refuse honorary or coerced authorship"
+    },
+    {
+      "skill": "peer-review-confidentiality-protocol",
+      "responsibility_en": "decide whether AI assistance is permitted in confidential review",
+      "responsibility_tr": "gizli hakemlikte yapay zekâ yardımına izin olup olmadığını değerlendir",
+      "boundary": "journal policy is silent",
+      "safety": "keep confidential manuscripts out of unapproved tools"
+    },
+    {
+      "skill": "multilingual-concept-validity-audit",
+      "responsibility_en": "audit construct equivalence, cultural adaptation, and conceptual drift",
+      "responsibility_tr": "yapı eşdeğerliği, kültürel uyarlama ve kavramsal kaymayı denetle",
+      "boundary": "linguistic accuracy conflicts with construct meaning",
+      "safety": "do not claim invariance without data"
+    },
+    {
+      "skill": "grant-proposal-workpackage-builder",
+      "responsibility_en": "build work packages, milestones, risks, dependencies, and budget logic",
+      "responsibility_tr": "iş paketi, kilometre taşı, risk, bağımlılık ve bütçe mantığı kur",
+      "boundary": "a partner commitment is unconfirmed",
+      "safety": "never invent partners, costs, or feasibility evidence"
+    },
+    {
+      "skill": "teaching-feedback-ai-boundaries",
+      "responsibility_en": "define AI rules for teaching, assessment, supervision, and feedback",
+      "responsibility_tr": "öğretim, ölçme, süpervizyon ve geri bildirim için yapay zekâ sınırlarını tanımla",
+      "boundary": "institutional policy conflicts with the exercise",
+      "safety": "protect student records and human misconduct authority"
+    },
+    {
+      "skill": "public-scholarship-ethics-adapter",
+      "responsibility_en": "adapt findings for public audiences while preserving evidence and uncertainty",
+      "responsibility_tr": "bulguları kanıt ve belirsizliği koruyarak kamuya uyarla",
+      "boundary": "a stronger public claim exceeds the evidence",
+      "safety": "protect embargoes and participant identity"
+    },
+    {
+      "skill": "preregistration-analysis-plan-ledger",
+      "responsibility_en": "freeze outcomes, estimands, exclusions, analyses, and deviation rules",
+      "responsibility_tr": "sonuç, kestirim hedefi, dışlama, analiz ve sapma kurallarını sabitle",
+      "boundary": "the outcome definition is unresolved",
+      "safety": "never relabel post hoc analysis as preregistered"
+    },
+    {
+      "skill": "agent-portability-matrix",
+      "responsibility_en": "compare client discovery, permissions, agents, tools, and migration risk",
+      "responsibility_tr": "istemci keşfi, izin, ajan, araç ve taşıma riskini karşılaştır",
+      "boundary": "hosts share skill logic but not agent formats",
+      "safety": "do not invent undocumented host capabilities"
+    },
+    {
+      "skill": "cross-agent-second-opinion",
+      "responsibility_en": "obtain independent verification and surface disagreement for human adjudication",
+      "responsibility_tr": "bağımsız doğrulama al ve uyuşmazlığı insan kararı için görünür kıl",
+      "boundary": "agents disagree on the evidence",
+      "safety": "never use agent votes as scientific proof or silently transmit data"
+    }
+  ]
+}

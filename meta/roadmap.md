@@ -1,122 +1,159 @@
 # Roadmap
 
-The public phase plan for `claude-code-for-social-scientists`. Dates are targets, not commitments. The author is a working clinical psychologist and PhD candidate, and academic work takes precedence over the repository when the two conflict.
+<!-- release-facts: version=4.0.0 booklets=33 language_files=66 categories=14 skills=32 verified=566 fabricated=0 -->
+
+This roadmap describes the public development direction of `OnourImpram/claude-code-for-social-scientists`. Dates are planning targets rather than commitments. Repository claims are limited to capabilities that are implemented, reachable, and tested.
 
 ## Current baseline
 
-The current public release is `v3.0.0`. It carries twenty-one released booklets in Turkish and English, at least one in every one of the twelve categories, all human-reviewed with complete AI-disclosure frontmatter, and twenty companion Claude Code project skills covering the research lifecycle from literature scoping to release integrity, distributed through the `social-cc-plugin` pip package and a native Claude Code plugin manifest. The Journal of Open Source Education paper is refreshed to this surface, with a submission readiness checklist in `meta/jose-submission.md` and a draft-PDF compile workflow. The earlier line built this surface in steps: v2.0.0 added audit-driven hardening, the companion MkDocs website, and a Journal of Open Source Education paper draft, v2.1.0 and v2.2.0 added the two data analysis booklets, v2.3.0 rewrote the Turkish prose in the author's native voice, v2.4.0 upgraded scholarship and voice in both languages and raised verified citation declarations from 240 to 248, v2.5.0 locked the Turkish lexicon, and v2.6.0 removed machine-writing rhetorical patterns and concept-level calques across the website and all booklets. v2.7.0 doubles the skill set from ten to twenty, adds a mandatory Turkish usage section to every skill, and repairs the infrastructure around the package: a pytest job in CI, a `social-cc doctor` environment check, a version single-source fix, a code of conduct, and a skill proposal template. v2.8.0 adds four booklets with live-verified citation cores, 007-01 (IMRAD scaffolding), 007-03 (journal fit and cover letters), 008-03 (qualitative coding), and 010-02 (anti-AI-trace writing for revisions), completing the planned slots of the academic writing, data analysis, and peer review categories and raising verified citation declarations from 248 to 306. v2.9.0 adds 003-03 (source passport), 005-02 (ritual hooks), 006-01 (MCP for the researcher), and 011-01 (conference materials), filling all twelve categories and raising verified declarations from 306 to 354; the Pages workflow also opts in to the Node 24 actions runtime ahead of the platform's 2026-06-16 switch.
+The current release metadata is v4.0.0, dated 2026-06-22. The repository contains thirty three released bilingual booklets, sixty six language files, fourteen categories, thirty two reviewed skills, 566 verified citation declarations, and zero fabricated citation declarations.
 
-## Next
+The v4 platform line adds a safe cross client installer, Claude Code and Codex skill discovery paths, ownership manifests, reviewable upgrades, recoverable removal, release truth validation, immutable GitHub Action pins, and a canonical Social Scientist Agent with host specific adapters.
 
-The `v3.0.0` milestone is reached, and the surface has grown past it. `v3.1.0` rebuilt all twenty-one booklets bilingually from the author's hand-revised Turkish sources alongside the academic-journal site redesign. `v3.2.0` adds twelve continuation booklets, expanded bilingually from the author's source drafts, opening two new categories (013 Teaching and Supervision, 014 Tool Portability) and extending six existing ones, raising the released catalog to thirty-three booklets across fourteen categories and aggregate verified citation declarations to 566 with zero fabricated. What remains beyond it is maintainer-gated or long-term: the JOSE submission itself (see `meta/jose-submission.md`, including the open dual-license question), the remaining ten planned booklets toward the full forty-three-booklet catalog, and the living lab with conference citations and instructional use. Dates stay unannounced on purpose.
+The repository name remains unchanged. The broader product subtitle is a Claude Code and Codex social science toolkit and open educational resource.
 
-## v0.1.0-alpha, scaffold
+## Capability status
 
-**Status.** Complete. Tagged on 2026-05-19.
-
-**Scope.**
-
-- Repository skeleton with the twelve-category booklet directory tree.
-- Dual-license header, Apache 2.0 for code and CC-BY-NC-SA 4.0 for content.
-- `CITATION.cff`, `AI-AUTHORSHIP.md`, `CATALOG.md`, and initial CI workflows.
-- First booklet path and bilingual coverage scaffolding.
-- Initial Zenodo, Software Heritage, copyright, and public repository setup tracked in the release history.
-
-## v0.2.0, remediation release
-
-**Status.** Complete. Released on 2026-05-19.
-
-**Scope.**
-
-- Zenodo concept DOI and version DOI replaced earlier placeholders.
-- Disclosure schema corrected to `title_en`, `title_tr`, `model_alias`, and `model_dated`.
-- CI frontmatter extraction and disclosure checks hardened.
-- v1.0 scope reduced from thirty booklets to ten mature core booklets.
-- READMEs, catalog, roadmap, citation metadata, and banner claims cleaned after senior review.
-
-## v1.0.0, first major release
-
-**Status.** Complete. Released on 2026-05-24.
-
-**Scope.** Ten core booklets at `release` status, selected to form a coherent manifesto across the foundational and highest-differentiation categories.
-
-| Identifier | Category | Title (EN) |
+| Capability | Status | Evidence surface |
 |---|---|---|
-| 001-01-0001 | Foundations | What is Claude Code? A Social Scientist's Perspective |
-| 001-01-0002 | Foundations | The Agentic Shift, From Chat Window to Working Partner |
-| 001-01-0003 | Foundations | Installation, First Session, and Sanity Checks |
-| 002-04-0001 | Academic Access | DergiPark, ULAKBIM TR Dizin, HEAL-Link, and Regional Indexing |
-| 003-01-0001 | Memory System | Memory as Vault, A First-Principles Introduction |
-| 004-01-0001 | Vault Architecture | Folder Discipline and the Maps of Content (MOC) Pattern |
-| 007-02-0001 | Academic Writing | APA 7 with DOI Discipline |
-| 009-01-0001 | Ethics and IRB | Ethics in AI-Assisted Research, From Principle to Behavior |
-| 010-01-0001 | Peer Review | Rebuttal Letters with Traceability Matrices |
-| 012-01-0001 | Troubleshooting | When Things Go Wrong, A Working Troubleshooting Protocol |
+| Bilingual curriculum | Shipped | `booklets/`, `CATALOG.md` |
+| Thirty two reviewed skills | Shipped | `.claude/skills/` |
+| Claude Code project skills | Shipped | `.claude/skills/`, installer |
+| Codex project skills | Shipped | installer target `.agents/skills` |
+| User and project scope install | Shipped | `social-cc install --scope` |
+| Ownership manifest | Shipped | `.social-cc/manifest.json` |
+| Reviewable diff and upgrade | Shipped | `social-cc diff`, `social-cc upgrade` |
+| Safe uninstall | Shipped | `social-cc uninstall` |
+| Claude Code plugin | Shipped | `.claude-plugin/` |
+| Codex plugin package | Not yet shipped | Requires a concrete current schema, packaging, install, and removal test |
+| Canonical Social Scientist Agent | Shipped in source | `core/agents/social-scientist.md` |
+| Claude Code agent adapter | Shipped | `.claude/agents/`, `agents/` |
+| Codex repository adapter | Shipped | `AGENTS.md` |
+| Cross client agent evaluation | In progress | Evaluation corpus and host smoke tests remain release gates |
+| Optional Mneme and Mergen integration | Experimental design only | No core dependency and no silent data transmission |
 
-**Release criteria met.**
+## Phase 1. Release truth and architecture
 
-- All ten booklets have both `tr.md` and `en.md`.
-- All twenty language files have `human_review: "complete"`.
-- All twenty language files have `fabricated_citations_count: 0`.
-- The aggregate release count is 10 release, 0 paired, 0 draft, 20 planned.
-- Version DOI for v1.0.0 is recorded in `CHANGELOG.md` and `CITATION.cff`.
+**Status: implemented.**
 
-## v1.1.x, companion project skills and distribution metadata
+- One machine readable release record in `meta/release.json`.
+- Derived checks for booklet, language, category, skill, and citation totals.
+- Version alignment across package, Python source, CFF, plugin, marketplace, and changelog.
+- Public release markers in README, Turkish README, catalog, roadmap, paper, website, and package landing page.
+- Architecture documentation for canonical sources and client adapters.
 
-**Status.** Complete. Released on 2026-05-24.
+## Phase 2. Scholarly and bilingual integrity
 
-**Scope.** Ten `.claude/skills/<skill-name>/SKILL.md` project skills that turn the v1.0 booklets into executable Claude Code workflows, plus two distribution paths: the `social-cc-plugin` pip package (GitHub Actions OpenID Connect trusted publishing) and a native Claude Code plugin manifest at `.claude-plugin/plugin.json`. The v1.1.1 patch removes direct maintainer email metadata from the public package and documents the post-release Zenodo version DOI flow.
+**Status: ongoing maintenance.**
 
-**Skill set.**
+- Reverify load bearing claims and sources.
+- Separate DOI identity, bibliographic metadata, source status, and claim level support.
+- Extend source manifests beyond DOI records to books, laws, standards, reports, official guidance, and product documentation.
+- Preserve Turkish and English conceptual equivalence without enforcing literal sentence parity.
+- Record corrections, retractions, and expressions of concern.
 
-- `social-science-literature-triage`
-- `apa-doi-verifier`
-- `bilingual-booklet-pairing`
-- `ai-disclosure-auditor`
-- `ethics-irb-ai-protocol`
-- `rebuttal-traceability-matrix`
-- `memory-vault-architect`
-- `regional-access-workflow`
-- `agentic-session-debugger`
-- `repo-release-integrity-check`
+## Phase 3. Skill library contracts
 
-**Release criteria met.**
+**Status: responsibility matrix implemented, trigger evaluation expanding.**
 
-- Every skill has a `SKILL.md` file with `name` and `description` frontmatter.
-- Every skill states when to use it, expected inputs, workflow, output format, verification checks, and safety boundaries.
-- The catalog and READMEs cross-reference the skill matrix.
-- CI validates skill discovery and booklet metadata consistency.
+- One primary responsibility per skill.
+- Explicit positive and negative triggers.
+- Inputs, workflow, output, verification, safety, handoff, and human authority boundaries.
+- Deterministic scripts permitted when they materially improve reliability.
+- Skill responsibility matrix and handoff graph.
+- Positive, negative, ambiguous, collision, safety, Turkish, and English trigger cases.
 
-## v1.5.0, community discussions opened
+High value capability gaps remain under evaluation. They include theory development, sampling and power, survey design, psychometrics, experimental and quasi experimental design, causal inference, measurement invariance, formal mixed methods integration, meta analysis, and replication packages.
 
-**Target.** 2026-10.
+## Phase 4. Dual client distribution
 
-**Scope.**
+**Status: core installer implemented.**
 
-- GitHub Discussions enabled with moderation guidelines.
-- Approximately ten additional booklets drafted, drawn from categories 008, 002, 005, and 006. The data analysis category (008) is prioritized following the Anthropic 2026 coding-agents survey, which finds that quantitative data analysis is the dominant social-science use of coding agents. Booklets 008-01-0001 (Reproducible Quantitative Workflows) and 008-02-0001 (Statistical Test Selection with AI Consultation Discipline) shipped at `release` status in v2.1.0 and v2.2.0 respectively, the first two of the data analysis category.
-- First external contributors merged.
-- Turkish and English translation review iterations integrated.
+- Canonical reviewed source remains `.claude/skills` for backward compatibility.
+- Claude Code user target is `~/.claude/skills`.
+- Claude Code project target is `<project>/.claude/skills`.
+- Codex user target is `~/.agents/skills`.
+- Codex project target is `<project>/.agents/skills`.
+- Existing unmanaged and locally modified files are protected.
+- Forced replacement and removal create recoverable backups.
+- Diff, upgrade, doctor, dry run, and uninstall are available.
 
-## v3.0.0, full thirty-booklet catalog and living lab
+Future work includes tested Windows PowerShell paths, interrupted upgrade recovery fixtures, and a native Codex plugin package if the current host contract justifies it.
 
-> **Note.** The v2.0.0 tag was used for the 2026-05-29 audit, hardening, and ecosystem release described under the current baseline. The full thirty-booklet catalog and living lab milestone, originally planned as v2.0.0, is now targeted for v3.0.0.
+## Phase 5. Security, privacy, licensing, and supply chain
 
-**Target.** 2027-04.
+**Status: substantially hardened.**
 
-**Scope.**
+- Executable surface documented in `SECURITY.md`.
+- Research data threat model and untrusted content rule.
+- Symlink, path, ownership, and destructive operation protections.
+- Full GitHub Action commit pinning with a structural gate.
+- Least privilege workflow permissions.
+- Wheel content and isolated installation checks.
+- Clear Apache 2.0 and CC BY NC SA 4.0 boundaries.
 
-- All thirty booklets in the catalog at `paired` or `release` status.
-- Citations from external academic work logged in `meta/external-citations.md`.
-- Instructional use cases documented with consent in `meta/instructional-use.md`.
-- The repository transitions from a single-author guide to a moderated community resource.
+Remaining work includes periodic dependency review, CodeQL evaluation, accessibility automation, and signed or provenance bearing release artifacts where supported.
 
-## Sustainability
+## Phase 6. Educational platform
 
-The author's completed commitment is the v1.0 milestone. Phases beyond v1.0 depend on community engagement, academic obligations, and continued funding for the time investment. The dual-license model keeps the work permanently citable and adaptable for non-commercial purposes regardless of the author's continued engagement.
+**Status: learning architecture implemented, sample project expanding.**
 
-If the author becomes unable to maintain the repository, the GitHub repository, Zenodo deposit, and Software Heritage Archive entry will remain accessible. The U.S. Copyright Office registration provides the evidentiary basis for the author's heirs or designated maintainer to enforce the license terms if needed.
+The learning pathways are:
 
----
+1. First session.
+2. Research workflow foundations.
+3. Method specific practice.
+4. Advanced agentic research.
 
-**Last updated.** 2026-05-29.
+The next curriculum milestone is a complete synthetic sample project that demonstrates question formation, source triage, preregistration, synthetic data, analysis, manuscript drafting, citation verification, disclosure, and open science packaging.
+
+## Phase 7. Contract freeze and evaluation foundation
+
+**Status: core contracts frozen, evaluation corpus expanding.**
+
+Frozen contracts include skill identity, handoffs, evidence vocabulary, research stages, data sensitivity, human decisions, verification, bilingual behavior, installer ownership, and agent outputs.
+
+The evaluation corpus must measure valid completion as well as safe refusal. A system trained only to reject adversarial cases is not acceptable.
+
+## Phase 8. Social Scientist Agent
+
+**Status: canonical agent and Claude adapters implemented.**
+
+The agent follows:
+
+```text
+ORIENT → INSPECT → CLASSIFY → SELECT SKILLS → WORK → VERIFY → HAND OFF
+```
+
+It selects the minimum sufficient skills, preserves method specific boundaries, protects sensitive data, distinguishes evidence from inference, and stops at human decision boundaries.
+
+The agent is not an autonomous principal investigator, ethics committee, statistician of record, legal adviser, clinical supervisor, automatic coauthor, or source of invented evidence.
+
+## Phase 9. Cross client evaluation
+
+**Status: focused installer tests implemented, full host dogfooding pending.**
+
+Required scenarios include psychology literature review, sociology survey, education interview study, public health observational study, political science mixed methods project, anthropology fieldnote workflow, systematic review, grant proposal, reviewer response, teaching workflow, open science package, and Turkish English manuscript work.
+
+Adversarial fixtures include fabricated and misapplied DOI values, retracted papers, unsupported causal language, identifiable interview material, confidential peer review content, hidden preregistration deviations, inappropriate statistical tests, altered qualitative quotations, construct changing translation, skill collisions, prompt injection, and false host parity.
+
+## Phase 10. Release candidate hardening
+
+**Status: branch level hardening in progress.**
+
+Before the next release candidate:
+
+- Reinspect the repository from zero.
+- Run the complete feasible Node, Python, documentation, package, installer, plugin, and citation suite.
+- Perform Claude Code and Codex smoke tests in clean temporary projects.
+- Verify user and project scope install, upgrade, diff, backup, and uninstall.
+- Verify generated agent adapters.
+- Verify the website, paper, package, catalog, changelog, and citation record.
+- Confirm no unresolved P0 or P1 issue remains.
+- Document all environmental limitations and host asymmetries.
+
+## Release policy
+
+A pull request is prepared for review and is not merged automatically. A green build establishes only the claims covered by the executed checks. It does not certify methodological validity, ethics approval, legal compliance, or professional judgment.
+
+**Last updated:** 2026-07-16.

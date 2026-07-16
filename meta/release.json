@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "repository": "OnourImpram/claude-code-for-social-scientists",
+  "package": "social-cc-plugin",
+  "release": {
+    "version": "4.0.0",
+    "date": "2026-06-22",
+    "zenodo_concept_doi": "10.5281/zenodo.20289687",
+    "zenodo_version_doi": "10.5281/zenodo.20789730",
+    "booklets": 33,
+    "language_files": 66,
+    "categories": 14,
+    "skills": 32,
+    "verified_citation_declarations": 566,
+    "fabricated_citations": 0
+  },
+  "platform": {
+    "canonical_skill_source": ".claude/skills",
+    "supported_clients": [
+      "claude-code",
+      "codex"
+    ],
+    "supported_scopes": [
+      "user",
+      "project"
+    ]
+  }
+}

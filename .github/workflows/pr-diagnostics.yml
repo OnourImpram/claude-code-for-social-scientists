@@ -1,0 +1,79 @@
+name: PR Diagnostics
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  diagnostics:
+    if: github.head_ref == 'upgrade/social-scientist-dual-client-agent'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Setup Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          python -m pip install --upgrade pip
+          python -m pip install -e . pytest ruff mypy build mkdocs-material mkdocs-same-dir
+
+      - name: Run diagnostics and comment
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        shell: bash
+        run: |
+          set +e
+          node --check scripts/validate-platform.mjs > /tmp/node-check.log 2>&1
+          node_status=$?
+          npm run validate > /tmp/validate.log 2>&1
+          validate_status=$?
+          python -m pytest tests/ -q > /tmp/pytest.log 2>&1
+          pytest_status=$?
+          mkdocs build --strict > /tmp/mkdocs.log 2>&1
+          mkdocs_status=$?
+
+          {
+            echo '<!-- social-cc-pr-diagnostics-2 -->'
+            echo '## Remaining diagnostic summary'
+            echo
+            echo "- Node syntax exit: ${node_status}"
+            echo "- repository validator exit: ${validate_status}"
+            echo "- pytest exit: ${pytest_status}"
+            echo "- MkDocs exit: ${mkdocs_status}"
+            for item in node-check validate pytest mkdocs; do
+              echo
+              echo "<details><summary>${item} tail</summary>"
+              echo
+              echo '```text'
+              tail -n 180 "/tmp/${item}.log"
+              echo '```'
+              echo '</details>'
+            done
+          } > /tmp/comment.md
+
+          gh pr comment "$PR_NUMBER" --body-file /tmp/comment.md

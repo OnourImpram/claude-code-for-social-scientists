@@ -196,9 +196,13 @@ function validateSkills() {
 }
 
 function extractDois(content) {
+  const prose = content
+    .replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/u, "")
+    .replace(/```[\s\S]*?```/gu, "")
+    .replace(/~~~[\s\S]*?~~~/gu, "");
   const dois = new Set();
-  const pattern = /https?:\/\/(?:dx\.)?doi\.org\/([^\s)\]>"']+)/giu;
-  for (const match of content.matchAll(pattern)) {
+  const pattern = /https?:\/\/(?:dx\.)?doi\.org\/([^\s)\]>"']/giu;
+  for (const match of prose.matchAll(pattern)) {
     dois.add(match[1].replace(/[.,;:]+$/u, "").toLowerCase());
   }
   return [...dois].sort();

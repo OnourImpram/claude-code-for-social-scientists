@@ -425,7 +425,7 @@ Current official Claude Code documentation was used for `.claude/skills`, `~/.cl
 
 ### Prerequisite decision
 
-**SOCIAL SCIENTIST AGENT PREREQUISITES: SATISFIED AFTER CONTRACT REVALIDATION**
+#### SOCIAL SCIENTIST AGENT PREREQUISITES: SATISFIED AFTER CONTRACT REVALIDATION
 
 ### Recorded process deviation
 

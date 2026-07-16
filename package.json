@@ -10,8 +10,9 @@
     "render:agents": "node scripts/render-agents.mjs",
     "check:agents": "node scripts/render-agents.mjs --check",
     "check:actions": "node scripts/check-action-pins.mjs",
+    "check:evaluation": "node scripts/validate-evaluation-corpus.mjs",
     "check-dois": "node scripts/check-dois.mjs",
-    "verify": "npm run lint && npm run validate && npm run validate:truth && npm run check:agents && npm run check:actions"
+    "verify": "npm run lint && npm run validate && npm run validate:truth && npm run check:agents && npm run check:actions && npm run check:evaluation"
   },
   "devDependencies": {
     "markdownlint-cli2": "0.22.1"

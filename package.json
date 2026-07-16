@@ -6,8 +6,9 @@
   "scripts": {
     "lint": "markdownlint-cli2 \"**/*.md\" \"#.git\" \"#node_modules\"",
     "validate": "node scripts/validate-repo.mjs",
+    "validate:truth": "node scripts/validate-release-truth.mjs",
     "check-dois": "node scripts/check-dois.mjs",
-    "verify": "npm run lint && npm run validate"
+    "verify": "npm run lint && npm run validate && npm run validate:truth"
   },
   "devDependencies": {
     "markdownlint-cli2": "0.22.1"

@@ -1,0 +1,48 @@
+{
+  "complete_pairs": 58,
+  "fixture_status": "fully_synthetic_not_empirical_evidence",
+  "groups": {
+    "comparison": {
+      "baseline_mean": 51.606667,
+      "completed_plan_proportion_observed": 0.517241,
+      "mean_change": 2.327586,
+      "missing_followup_proportion": 0.033333,
+      "n_complete": 29,
+      "n_missing_followup": 1,
+      "n_total": 30,
+      "sd_change": 5.108599,
+      "se_change": 0.948643
+    },
+    "guided": {
+      "baseline_mean": 49.87,
+      "completed_plan_proportion_observed": 0.965517,
+      "mean_change": 7.189655,
+      "missing_followup_proportion": 0.033333,
+      "n_complete": 29,
+      "n_missing_followup": 1,
+      "n_total": 30,
+      "sd_change": 3.999942,
+      "se_change": 0.74277
+    }
+  },
+  "human_decisions_required": [
+    "real study design and allocation",
+    "construct and instrument validity",
+    "sample size and power",
+    "missing data strategy",
+    "estimand and uncertainty method",
+    "ethics and data governance",
+    "substantive interpretation"
+  ],
+  "interpretation": "The generated guided group has a larger mean change in this fixture. This independently calculated result is not evidence of real-world efficacy, causality, external validity, or instrument validity.",
+  "primary_estimand": {
+    "estimate": 4.862069,
+    "name": "guided_minus_comparison_mean_change",
+    "normal_approximation_95_interval": [
+      2.500589,
+      7.223549
+    ]
+  },
+  "python_version": "3.13.5",
+  "total_rows": 60
+}

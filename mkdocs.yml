@@ -1,8 +1,7 @@
 site_name: Claude Code for Social Scientists
 site_description: >-
-  A bilingual (Turkish + English) open-source guide for social scientists using
-  Anthropic's Claude Code in research, teaching, and academic writing.
-  Sosyal bilimciler için iki dilli açık kaynak Claude Code rehberi.
+  A bilingual Turkish and English curriculum, skill library, safe installer, and
+  Social Scientist Agent for social scientists using Claude Code and Codex.
 site_url: https://onourimpram.github.io/claude-code-for-social-scientists/
 repo_url: https://github.com/OnourImpram/claude-code-for-social-scientists
 repo_name: OnourImpram/claude-code-for-social-scientists
@@ -20,12 +19,18 @@ exclude_docs: |
   .git/
   .github/
   .claude/
+  .claude-plugin/
+  .agents/
+  agents/
+  core/
+  examples/
   src/
   scripts/
   template/
   meta/
   tests/
   paper/
+  provenance/
   assets/*.json
   assets/*.svg
   package.json
@@ -38,13 +43,13 @@ exclude_docs: |
   README.tr.md
   AI-AUTHORSHIP.md
   CHANGELOG.md
+  AGENTS.md
   mkdocs.yml
 
 theme:
   name: material
   language: en
-  # Self-hosted fonts via assets/extra.css; disable Material's Google Fonts
-  # fetch so the booklets make zero third-party requests, like the landing.
+  # Self-hosted fonts via assets/extra.css. Material must not fetch Google Fonts.
   font: false
   palette:
     - media: "(prefers-color-scheme: light)"
@@ -103,6 +108,15 @@ markdown_extensions:
 nav:
   - Home: README.md
   - Catalog: CATALOG.md
+  - Platform:
+      - Architecture: docs/SOCIAL_SCIENTIST_PLATFORM_ARCHITECTURE.md
+      - Social Scientist Agent: docs/SOCIAL_SCIENTIST_AGENT.md
+      - Learning Paths: docs/LEARNING_PATHS.md
+      - Skill Responsibilities and Handoffs: docs/SKILL_RESPONSIBILITY_AND_HANDOFF_MATRIX.md
+      - Security, Privacy, and Research Data: docs/SECURITY_PRIVACY_AND_RESEARCH_DATA_BOUNDARIES.md
+      - Claude Code Integration: docs/CLAUDE_CODE_INTEGRATION.md
+      - Codex Integration: docs/CODEX_INTEGRATION.md
+      - Ten Loop Engineering Report: docs/TEN_LOOP_ENGINEERING_REPORT.md
   - Contributing: CONTRIBUTING.md
 
   - "001 Foundations / Temeller":

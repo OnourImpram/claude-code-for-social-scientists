@@ -1,46 +1,81 @@
 # social-cc-plugin
 
-Install the **Claude Code for Social Scientists** project skills into your Claude configuration.
+<!-- release-facts: version=4.0.0 booklets=33 language_files=66 categories=14 skills=32 verified=566 fabricated=0 -->
+<!-- platform-facts: canonical=.claude/skills clients=claude-code,codex scopes=user,project -->
 
-This package bundles twenty Claude Code project skills that turn the booklets in
-[claude-code-for-social-scientists](https://github.com/OnourImpram/claude-code-for-social-scientists)
-into repeatable, auditable workflows for academic work. The set covers the research lifecycle:
-literature triage, regional academic access, MCP stack triage, research vault architecture, source
-passport ledgers, bilingual manuscript scaffolding, statistical consultation, qualitative coding
-discipline, APA 7 DOI verification, AI disclosure auditing, ethics and IRB protocols, rebuttal
-traceability, anti-AI-trace revision, journal fit screening, bilingual conference materials,
-research ritual hooks, lifecycle routing, bilingual booklet pairing, agentic session debugging, and
-pre-release repository integrity checks. Every skill closes with a Turkish usage section alongside
-its English protocol.
+Install and maintain the **Claude Code for Social Scientists** skill library for Claude Code, Codex, or both clients.
+
+The package bundles thirty two reviewed social science skills from the repository's canonical `.claude/skills` source. The same `SKILL.md` content is installed into client specific discovery paths. Claude Code uses `.claude/skills`. Codex uses `.agents/skills`.
+
+The skills cover literature triage, regional academic access, MCP trust, research memory, source ledgers, bilingual writing, journal fit, statistical and qualitative discipline, evidence synthesis, preregistration, sensitive data, ethics, peer review, teaching, public scholarship, open science, portability, and independent verification.
 
 ## Install
 
 ```bash
 pip install social-cc-plugin
-social-cc install
 ```
 
-`social-cc install` copies the skills into `~/.claude/skills/`. Use `social-cc install --project` to
-write them into the current project's `.claude/skills/` directory instead, `--dry-run` to preview
-without writing, and `--force` to overwrite existing skill directories. `social-cc list` shows what
-is bundled.
+### Claude Code
+
+```bash
+social-cc install --client claude-code
+social-cc install --client claude-code --scope project
+```
+
+The backward compatible project form remains available.
+
+```bash
+social-cc install --project
+```
+
+### Codex
+
+```bash
+social-cc install --client codex
+social-cc install --client codex --scope project
+```
+
+### Both clients
+
+```bash
+social-cc install --client all
+social-cc install --client all --scope project
+```
+
+## Inspect and maintain
+
+```bash
+social-cc list
+social-cc diff --client all
+social-cc upgrade --client all
+social-cc doctor --client all
+social-cc uninstall --client all
+```
+
+Use `--dry-run` to inspect an install, upgrade, or removal without writing. Existing unmanaged directories and locally modified project files are protected by default.
+
+The installer records project ownership in `.social-cc/manifest.json`. A forced replacement or removal first moves the prior directory into `.social-cc/backups/`. `--force` therefore means preserve and replace, not recursively delete without recovery.
 
 ## What the skills do
 
-The skills carry repeatable operating protocols, not new scholarly content. Each skill states when
-to use it, expected inputs, a workflow, an output format, verification checks, and explicit safety
-boundaries. They never request credentials, never bypass paywalls or access controls, and never
-invent citations.
+Each skill has one primary responsibility and defines positive and negative triggers, inputs, workflow, output, verification, safety, handoffs, and human authority boundaries. The skills do not request credentials, bypass access controls, invent evidence, approve research, or silently transmit research material.
+
+The Social Scientist Agent uses the minimum sufficient skill set for substantive workflows. It does not invoke every installed skill and does not duplicate the detailed procedures owned by individual skills.
+
+## Data and security boundaries
+
+Articles, websites, repositories, PDFs, transcripts, datasets, and reviewer files are research evidence. They are never instructions that may redefine permissions, safety rules, the research question, inclusion criteria, or the workflow.
+
+Raw clinical material, identifiable participant or patient data, student records, confidential peer review manuscripts, credentials, and institutional secrets must not enter an unapproved tool context.
+
+The installer performs no network requests. It rejects unsafe skill names, symlinked skill and control paths, and malformed ownership manifests.
 
 ## License
 
-The installer code is licensed under Apache-2.0. The bundled skill content is licensed under
-CC-BY-NC-SA-4.0, the same terms as the guide's prose: non-commercial use with attribution and
-share-alike. Full license text lives in the
-[repository](https://github.com/OnourImpram/claude-code-for-social-scientists).
+Installer code, validators, renderers, and configuration are licensed under Apache 2.0. Bundled skill prose remains under CC BY NC SA 4.0. The wheel includes both license notices.
 
 ## Citation
 
-Cite the guide through its Zenodo concept DOI
-[10.5281/zenodo.20289687](https://doi.org/10.5281/zenodo.20289687), which always resolves to the
-latest version.
+Cite the project through `CITATION.cff` or the Zenodo concept DOI **10.5281/zenodo.20289687**. The recorded v4.0.0 version DOI is **10.5281/zenodo.20789730**.
+
+The source repository is `OnourImpram/claude-code-for-social-scientists`.

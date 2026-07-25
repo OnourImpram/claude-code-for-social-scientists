@@ -1,14 +1,12 @@
 name: Link and DOI Liveness
 
-# Network-dependent liveness checks. These run on a schedule and on demand,
-# never on push or pull_request, so a transient outage or rate limit can never
-# paint a pull request falsely red. They are not branch-protection gates; they
-# surface link rot and dead DOIs for a human to triage.
+# Network dependent liveness checks run on a schedule and on demand. They do
+# not gate pull requests because a transient outage or rate limit must not
+# produce a false release failure.
 
 on:
   workflow_dispatch:
   schedule:
-    # Mondays 07:00 UTC, offset one hour after the secret scan.
     - cron: "0 7 * * 1"
 
 permissions:
@@ -27,13 +25,13 @@ jobs:
       contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           fetch-depth: 1
           persist-credentials: false
 
       - name: Check links with lychee
-        uses: lycheeverse/lychee-action@v2
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2
         with:
           args: >-
             --no-progress
@@ -57,13 +55,13 @@ jobs:
       contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           fetch-depth: 1
           persist-credentials: false
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: "20"
 

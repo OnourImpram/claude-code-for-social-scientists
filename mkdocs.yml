@@ -37,6 +37,7 @@ exclude_docs: |
   package-lock.json
   pyproject.toml
   LICENSE
+  LICENSING.md
   SECURITY.md
   CODE_OF_CONDUCT.md
   CONTRIBUTING.tr.md

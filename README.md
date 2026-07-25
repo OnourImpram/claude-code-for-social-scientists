@@ -210,7 +210,10 @@ Network dependent DOI and external link checks are separate from deterministic p
 
 Code, configuration, validators, renderers, and installer logic are licensed under Apache 2.0. Skill prose, booklets, educational guides, and templates are licensed under CC BY NC SA 4.0 unless a file states otherwise. Generated adapters inherit the license of their canonical source.
 
-See [`LICENSE`](./LICENSE), <a href="./LICENSE.code">LICENSE.code</a>, and <a href="./LICENSE.content">LICENSE.content</a>.
+[`LICENSING.md`](./LICENSING.md) is the authoritative statement of the dual arrangement. The root
+[`LICENSE`](./LICENSE) carries the Apache 2.0 text for the code, which is what GitHub detects and displays;
+<a href="./LICENSE.code">LICENSE.code</a> is the same text under its descriptive name, and
+<a href="./LICENSE.content">LICENSE.content</a> carries CC BY NC SA 4.0 for the prose.
 
 ## Citation
 

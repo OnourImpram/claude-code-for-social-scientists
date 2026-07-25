@@ -210,7 +210,10 @@ Ağ bağlantısına bağlı DOI ve dış bağlantı denetimleri, belirlenimci ç
 
 Kod, yapılandırma, doğrulayıcı, üretici ve kurulum mantığı Apache 2.0 kapsamındadır. Beceri metinleri, kitapçıklar, eğitim rehberleri ve şablonlar, dosyada başka bir hüküm yoksa CC BY NC SA 4.0 kapsamındadır. Üretilmiş uyarlayıcılar tek kaynak dosyanın lisansını taşır.
 
-Ayrıntılar için [`LICENSE`](./LICENSE), [`LICENSE.code`](./LICENSE.code) ve [`LICENSE.content`](./LICENSE.content) dosyalarına bakın.
+Çift lisans düzeninin bağlayıcı beyanı [`LICENSING.md`](./LICENSING.md) dosyasındadır. Kökteki
+[`LICENSE`](./LICENSE) kod için Apache 2.0 metnini taşır ve GitHub'ın algılayıp gösterdiği lisans budur;
+[`LICENSE.code`](./LICENSE.code) aynı metnin adlandırılmış kopyası, [`LICENSE.content`](./LICENSE.content)
+ise metinler için CC BY NC SA 4.0 lisansıdır.
 
 ## Atıf
 

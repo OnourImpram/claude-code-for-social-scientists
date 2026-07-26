@@ -237,7 +237,7 @@ Code, configuration, validators, renderers, and installer logic are licensed und
 
 ## Citation
 
-Use the machine readable record in <a href="./CITATION.cff">CITATION.cff</a> or GitHub's citation interface. The Zenodo concept DOI is **10.5281/zenodo.20289687** and resolves to the latest archived version. Per-release version DOIs are listed in [`CITATION.cff`](./CITATION.cff).
+Use the machine readable record in <a href="./CITATION.cff">CITATION.cff</a> or GitHub's citation interface. The Zenodo concept DOI is **10.5281/zenodo.20289687** and resolves to the latest archived version. Per-release version DOIs are listed there.
 
 ## Contributing
 

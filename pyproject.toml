@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "social-cc-plugin"
-version = "4.0.0"
+version = "5.0.0"
 description = "Install the Claude Code for Social Scientists project skills into your Claude configuration."
 readme = "meta/social-cc-plugin.md"
 requires-python = ">=3.9"

@@ -15,8 +15,8 @@ authors:
     orcid: "https://orcid.org/0000-0003-1076-3928"
 url: "https://github.com/OnourImpram/claude-code-for-social-scientists"
 repository-code: "https://github.com/OnourImpram/claude-code-for-social-scientists"
-version: "4.0.0"
-date-released: "2026-06-22"
+version: "5.0.0"
+date-released: "2026-07-26"
 license:
   - Apache-2.0
   - CC-BY-NC-SA-4.0
@@ -107,8 +107,8 @@ preferred-citation:
       family-names: Impram
       orcid: "https://orcid.org/0000-0003-1076-3928"
   year: 2026
-  version: "4.0.0"
-  doi: "10.5281/zenodo.20789730"
+  version: "5.0.0"
+  doi: "10.5281/zenodo.20289687"
   url: "https://github.com/OnourImpram/claude-code-for-social-scientists"
   license:
     - Apache-2.0

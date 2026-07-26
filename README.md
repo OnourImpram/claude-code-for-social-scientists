@@ -7,26 +7,48 @@
 <!-- release-facts: version=4.0.0 booklets=33 language_files=66 categories=14 skills=32 verified=566 fabricated=0 -->
 <!-- platform-facts: canonical=.claude/skills clients=claude-code,codex scopes=user,project -->
 
-A bilingual open platform that helps social scientists use Claude Code and Codex without reducing research to generic prompt writing. It combines a Turkish and English curriculum, a verified skill library, a safe cross client installer, and a Social Scientist Agent contract for evidence disciplined research workflows.
+Research skills and a bilingual curriculum for Claude Code, written for social scientists rather than for software engineers.
 
-Created and maintained by Onour Impram, a clinical psychologist, postdoctoral researcher, and artificial intelligence researcher. The project is designed for researchers inside and outside English dominant academic infrastructure and is grounded in real research, teaching, clinical, and open science constraints.
+You asked a model for sources. Some of them turned out not to exist, and now no entry in the reference list can be trusted until you have checked it yourself. The screening backlog has not moved, the Turkish version and the English version of the paper still have to make the same claims, and a reviewer will still ask which claim came from which study.
 
-> **Current release facts, v4.0.0.** Thirty three released booklets, sixty six Turkish and English language files, fourteen categories, and thirty two reviewed skills. The disclosed booklet metadata contains 566 verified citation declarations and zero fabricated citation declarations. A declaration count is not a count of unique sources. Release facts are governed by [`meta/release.json`](./meta/release.json) and checked against the repository by `scripts/validate-release-truth.mjs`.
+Everyone says these terminal tools will change how research gets done, and every guide to them is written for people who build software for a living.
+
+Claude Code for Social Scientists installs 32 narrow research skills into Claude Code — DOI verification, PRISMA screening, preregistration ledgers, anonymization gates, bilingual manuscript scaffolding — alongside a Turkish and English curriculum for researchers in psychology, sociology, education, public health, and adjacent fields who are new to the terminal.
+
+<!-- DEMO-SLOT -->
+
+> **What this looks like in a session.**
+>
+> *You:* Check every reference in chapter 3 against Crossref and tell me which ones you could not resolve.
+>
+> *[`apa-doi-verifier`](./.claude/skills/apa-doi-verifier/SKILL.md):* one row per reference, with source type, DOI status, metadata status, and a fabricated citation risk rating; then corrected APA 7 entries for the references that resolved, and a separate list of the ones that did not. The skill's instructions forbid repairing an unresolved DOI by guesswork, so an unresolved reference comes back marked unresolved rather than filled in.
+
+```bash
+pip install social-cc-plugin
+social-cc install --project    # copies the 32 skills into ./.claude/skills
+```
 
 > **Türkçe okuyucular.** Tam Türkçe giriş için [`README.tr.md`](./README.tr.md) dosyasına bakın. Her yayımlanmış kitapçıkta `tr.md` ve `en.md` birlikte bulunur.
 
-## What the project ships
+The counts on this page come from the build rather than from typing, and a booklet that declares a fabricated citation fails that build. What each check covers, and what it does not, is in [How the claims are checked](#how-the-claims-are-checked).
 
-1. A bilingual curriculum covering the social science research lifecycle.
-2. Thirty two narrow research skills with verification and safety boundaries.
-3. A Python command line installer for Claude Code and Codex.
-4. Ownership manifests, diff, upgrade, backup, doctor, and safe uninstall behavior.
-5. A canonical Social Scientist Agent that orchestrates skills without replacing researcher judgment.
-6. Deterministic release truth, bilingual pairing, citation metadata, agent drift, and supply chain checks.
-7. Claude Code plugin packaging and project adapters.
-8. Codex repository guidance through `AGENTS.md` and `.agents/skills` installation.
+Created and maintained by Onour Impram, a clinical psychologist, postdoctoral researcher, and artificial intelligence researcher. The project is designed for researchers inside and outside English dominant academic infrastructure and is grounded in real research, teaching, clinical, and open science constraints.
+
+## Scope and limits
 
 The human researcher retains scientific, interpretive, ethical, legal, clinical, and professional authority. The platform does not act as an ethics committee, statistician of record, licensed legal adviser, clinical supervisor, or autonomous principal investigator.
+
+> **Current release facts, v4.0.0.** Thirty three released booklets, sixty six Turkish and English language files, fourteen categories, and thirty two reviewed skills. The disclosed booklet metadata contains 566 verified citation declarations and zero fabricated citation declarations. A declaration count is not a count of unique sources. Release facts are governed by [`meta/release.json`](./meta/release.json) and checked against the repository by `scripts/validate-release-truth.mjs`.
+
+The published 4.0.0 package installs into Claude Code only. Codex targets, the `--client` and `--scope` flags, `diff`, `upgrade`, and `uninstall` documented in the install section below are recorded under `## Unreleased` in [`CHANGELOG.md`](./CHANGELOG.md) and exist on the repository trunk, not in the package `pip` gives you. Use `social-cc install --project` until they ship.
+
+## How the claims are checked
+
+- **The counts are re-derived from the repository, not typed.** `npm run validate:truth` walks the repository, re-derives booklets, language files, categories, skills, and citation declarations, and fails the build when any of them disagrees with [`meta/release.json`](./meta/release.json), or when this page is missing the exact machine readable release facts marker at the top of the file. The spelled out numbers in the prose above are not themselves compared against the repository; the marker and `meta/release.json` are.
+- **A booklet that declares a nonzero fabricated citation count fails the build.** The check is in [`scripts/validate-platform.mjs`](./scripts/validate-platform.mjs), and it enforces the declaration rather than the underlying references: a booklet that declares zero and contains a fabricated reference passes. Proving a declaration true is human work, and `apa-doi-verifier` and `source-passport-ledger` are the workflows for doing it. A complete claim level reread of every source is recorded as an open limitation in [`docs/TEN_LOOP_ENGINEERING_REPORT.md`](./docs/TEN_LOOP_ENGINEERING_REPORT.md).
+- **The routing corpus is generated and checked for shape, not executed.** `npm run check:evaluation` derives six cases per skill from one seed record in [`tests/fixtures/skill-routing-seeds.json`](./tests/fixtures/skill-routing-seeds.json) — two positive, two negative, one boundary, one safety, split across Turkish and English — for 192 cases over 32 skills, and fails when the seed list and the canonical skill directory disagree, when a seed is malformed, or when the per-skill case mix drifts. Alongside them, [`tests/fixtures/agent-scenarios.json`](./tests/fixtures/agent-scenarios.json) carries 18 agent scenarios, 15 traps and boundary cases and 3 valid workflow controls, and the build fails if fewer than 15 scenarios remain, if fewer than two valid workflow controls remain, or if any required kind — `valid_workflow`, `sensitive_data`, `citation_trap`, `prompt_injection`, `routing_trap`, `client_capability_trap` — goes missing. None of it is run against a live Claude Code or Codex session; native authenticated invocation is recorded as an open limitation in [`docs/TEN_LOOP_ENGINEERING_REPORT.md`](./docs/TEN_LOOP_ENGINEERING_REPORT.md).
+
+Start with the curriculum in [`booklets/`](./booklets). The research integrity commitments, the security and privacy boundaries, the licensing split, and the record of open verification limits are stated in full below.
 
 ## Audience
 

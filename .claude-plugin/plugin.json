@@ -1,7 +1,7 @@
 {
   "name": "social-cc-plugin",
   "displayName": "Claude Code for Social Scientists",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "A bilingual Turkish and English social science toolkit for Claude Code with 32 reviewed research skills and a Social Scientist Agent. It supports evidence verification, methodological discipline, privacy, bilingual scholarship, reproducibility, peer review, teaching, and open science while preserving human scientific authority.",
   "author": {
     "name": "Onour Impram",

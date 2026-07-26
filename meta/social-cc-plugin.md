@@ -1,6 +1,6 @@
 # social-cc-plugin
 
-<!-- release-facts: version=4.0.0 booklets=33 language_files=66 categories=14 skills=32 verified=566 fabricated=0 -->
+<!-- release-facts: version=5.0.0 booklets=33 language_files=66 categories=14 skills=32 verified=566 fabricated=0 -->
 <!-- platform-facts: canonical=.claude/skills clients=claude-code,codex scopes=user,project -->
 
 Install and maintain the **Claude Code for Social Scientists** skill library for Claude Code, Codex, or both clients.
@@ -76,6 +76,6 @@ Installer code, validators, renderers, and configuration are licensed under Apac
 
 ## Citation
 
-Cite the project through `CITATION.cff` or the Zenodo concept DOI **10.5281/zenodo.20289687**. The recorded v4.0.0 version DOI is **10.5281/zenodo.20789730**.
+Cite the project through `CITATION.cff` or the Zenodo concept DOI **10.5281/zenodo.20289687**. Per-release version DOIs are listed in `CITATION.cff`.
 
 The source repository is `OnourImpram/claude-code-for-social-scientists`.

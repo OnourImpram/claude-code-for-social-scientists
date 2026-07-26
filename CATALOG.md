@@ -1,6 +1,6 @@
 # Catalog
 
-<!-- release-facts: version=4.0.0 booklets=33 language_files=66 categories=14 skills=32 verified=566 fabricated=0 -->
+<!-- release-facts: version=5.0.0 booklets=33 language_files=66 categories=14 skills=32 verified=566 fabricated=0 -->
 
 This catalog is the human readable registry of the bilingual curriculum and companion skill library. Booklet identifiers use `KKK-AA-SSSS`, where `KKK` is the category, `AA` is the subcategory, and `SSSS` is the stable serial number. Released identifiers do not change when content is revised.
 
@@ -188,4 +188,4 @@ Booklet identifiers are immutable. Content versions are recorded in frontmatter 
 
 Review [`CONTRIBUTING.md`](./CONTRIBUTING.md) or [`CONTRIBUTING.tr.md`](./CONTRIBUTING.tr.md). Proposals should name the next available identifier, define the audience and methodological responsibility, explain the bilingual plan, identify human authority boundaries, and state how claims and citations will be verified.
 
-**Last updated:** 2026-07-16. The catalog is aligned with v4.0.0 release metadata and the thirty two skill dual client platform surface.
+**Last updated:** 2026-07-16. The catalog is aligned with v5.0.0 release metadata and the thirty two skill dual client platform surface.

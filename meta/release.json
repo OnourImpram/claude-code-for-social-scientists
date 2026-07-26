@@ -3,8 +3,8 @@
   "repository": "OnourImpram/claude-code-for-social-scientists",
   "package": "social-cc-plugin",
   "release": {
-    "version": "4.0.0",
-    "date": "2026-06-22",
+    "version": "5.0.0",
+    "date": "2026-07-26",
     "zenodo_concept_doi": "10.5281/zenodo.20289687",
     "zenodo_version_doi": "10.5281/zenodo.20789730",
     "booklets": 33,

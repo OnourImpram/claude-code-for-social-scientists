@@ -4,7 +4,7 @@
 
 # Claude Code for Social Scientists
 
-<!-- release-facts: version=4.0.0 booklets=33 language_files=66 categories=14 skills=32 verified=566 fabricated=0 -->
+<!-- release-facts: version=5.0.0 booklets=33 language_files=66 categories=14 skills=32 verified=566 fabricated=0 -->
 <!-- platform-facts: canonical=.claude/skills clients=claude-code,codex scopes=user,project -->
 
 Research skills and a bilingual curriculum for Claude Code, written for social scientists rather than for software engineers.
@@ -38,9 +38,7 @@ Created and maintained by Onour Impram, a clinical psychologist, postdoctoral re
 
 The human researcher retains scientific, interpretive, ethical, legal, clinical, and professional authority. The platform does not act as an ethics committee, statistician of record, licensed legal adviser, clinical supervisor, or autonomous principal investigator.
 
-> **Current release facts, v4.0.0.** Thirty three released booklets, sixty six Turkish and English language files, fourteen categories, and thirty two reviewed skills. The disclosed booklet metadata contains 566 verified citation declarations and zero fabricated citation declarations. A declaration count is not a count of unique sources. Release facts are governed by [`meta/release.json`](./meta/release.json) and checked against the repository by `scripts/validate-release-truth.mjs`.
-
-The published 4.0.0 package installs into Claude Code only. Codex targets, the `--client` and `--scope` flags, `diff`, `upgrade`, and `uninstall` documented in the install section below are recorded under `## Unreleased` in [`CHANGELOG.md`](./CHANGELOG.md) and exist on the repository trunk, not in the package `pip` gives you. Use `social-cc install --project` until they ship.
+> **Current release facts, v5.0.0.** Thirty three released booklets, sixty six Turkish and English language files, fourteen categories, and thirty two reviewed skills. The disclosed booklet metadata contains 566 verified citation declarations and zero fabricated citation declarations. A declaration count is not a count of unique sources. Release facts are governed by [`meta/release.json`](./meta/release.json) and checked against the repository by `scripts/validate-release-truth.mjs`.
 
 ## How the claims are checked
 
@@ -239,7 +237,7 @@ Code, configuration, validators, renderers, and installer logic are licensed und
 
 ## Citation
 
-Use the machine readable record in <a href="./CITATION.cff">CITATION.cff</a> or GitHub's citation interface. The Zenodo concept DOI is **10.5281/zenodo.20289687** and resolves to the latest archived version. The current version DOI recorded for v4.0.0 is **10.5281/zenodo.20789730**.
+Use the machine readable record in <a href="./CITATION.cff">CITATION.cff</a> or GitHub's citation interface. The Zenodo concept DOI is **10.5281/zenodo.20289687** and resolves to the latest archived version. Per-release version DOIs are listed in [`CITATION.cff`](./CITATION.cff).
 
 ## Contributing
 

@@ -20,7 +20,7 @@ date: 16 July 2026
 bibliography: paper.bib
 ---
 
-<!-- release-facts: version=4.0.0 booklets=33 language_files=66 categories=14 skills=32 verified=566 fabricated=0 -->
+<!-- release-facts: version=5.0.0 booklets=33 language_files=66 categories=14 skills=32 verified=566 fabricated=0 -->
 
 # Summary
 

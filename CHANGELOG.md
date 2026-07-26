@@ -6,7 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 Citations of this work should use the Zenodo concept DOI [10.5281/zenodo.20289687](https://doi.org/10.5281/zenodo.20289687), which always resolves to the latest version. Version-specific DOIs are listed below.
 
-## Unreleased
+## [5.0.0] - 2026-07-26
+
+Major release. The project becomes an installable platform. First class Claude Code and Codex installation targets at user and project scope ship together with ownership manifests, recoverable backups, a canonical Social Scientist Agent with generated adapters, and validators for release truth, agent parity, and immutable action pins.
 
 ### Added
 

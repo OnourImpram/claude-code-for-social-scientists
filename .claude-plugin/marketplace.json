@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "The Claude Code plugin marketplace for a bilingual social science curriculum, 32 reviewed research skills, and a Social Scientist Agent. The repository also provides a separate cross-client installer for Codex skills.",
-    "version": "4.0.0"
+    "version": "5.0.0"
   },
   "plugins": [
     {
       "name": "social-cc-plugin",
       "source": "./",
       "description": "A bilingual Turkish and English Claude Code toolkit with 32 reviewed social science skills and a Social Scientist Agent for evidence verification, methodological discipline, privacy, reproducibility, writing, peer review, teaching, and open science.",
-      "version": "4.0.0",
+      "version": "5.0.0",
       "author": {
         "name": "Onour Impram",
         "url": "https://orcid.org/0000-0003-1076-3928"

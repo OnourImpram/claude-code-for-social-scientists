@@ -4,14 +4,14 @@
 
 # Sosyal Bilimciler İçin Claude Code
 
-<!-- release-facts: version=4.0.0 booklets=33 language_files=66 categories=14 skills=32 verified=566 fabricated=0 -->
+<!-- release-facts: version=5.0.0 booklets=33 language_files=66 categories=14 skills=32 verified=566 fabricated=0 -->
 <!-- platform-facts: canonical=.claude/skills clients=claude-code,codex scopes=user,project -->
 
 Sosyal bilimcilerin Claude Code ve Codex kullanırken araştırmayı sıradan komut yazımına indirgememesi için geliştirilmiş iki dilli, açık bir platformdur. Türkçe ve İngilizce bir eğitim programını, doğrulanmış beceri kütüphanesini, güvenli istemci kurulum aracını ve kanıta dayalı araştırma iş akışlarını düzenleyen Sosyal Bilimci Ajan sözleşmesini bir araya getirir.
 
 Proje, klinik psikolog, doktora sonrası araştırmacı ve yapay zekâ araştırmacısı Onour Impram tarafından oluşturulmakta ve sürdürülmektedir. İngilizce merkezli akademik altyapının hem içinde hem dışında çalışan araştırmacılar için tasarlanmıştır. Araştırma, öğretim, klinik gizlilik, açık bilim ve bölgesel erişim koşullarını gerçek çalışma sınırları olarak ele alır.
 
-> **Güncel sürüm gerçekleri, v4.0.0.** Otuz üç yayımlanmış kitapçık, Türkçe ve İngilizce toplam altmış altı dil dosyası, on dört kategori ve otuz iki gözden geçirilmiş beceri bulunmaktadır. Kitapçık üstverilerinde 566 doğrulanmış atıf beyanı ve sıfır uydurma atıf beyanı yer alır. Bu sayı benzersiz kaynak sayısı değildir. Sürüm gerçeklerinin tek makinece okunabilir kaynağı [`meta/release.json`](./meta/release.json) dosyasıdır. `scripts/validate-release-truth.mjs` bu bilgileri depo yapısından yeniden türeterek denetler.
+> **Güncel sürüm gerçekleri, v5.0.0.** Otuz üç yayımlanmış kitapçık, Türkçe ve İngilizce toplam altmış altı dil dosyası, on dört kategori ve otuz iki gözden geçirilmiş beceri bulunmaktadır. Kitapçık üstverilerinde 566 doğrulanmış atıf beyanı ve sıfır uydurma atıf beyanı yer alır. Bu sayı benzersiz kaynak sayısı değildir. Sürüm gerçeklerinin tek makinece okunabilir kaynağı [`meta/release.json`](./meta/release.json) dosyasıdır. `scripts/validate-release-truth.mjs` bu bilgileri depo yapısından yeniden türeterek denetler.
 
 > **English readers.** The complete English introduction is in [`README.md`](./README.md). Every released booklet contains `tr.md` and `en.md` together.
 
@@ -217,7 +217,7 @@ ise metinler için CC BY NC SA 4.0 lisansıdır.
 
 ## Atıf
 
-[`CITATION.cff`](./CITATION.cff) dosyasındaki makinece okunabilir kaydı ya da GitHub atıf arayüzünü kullanın. Zenodo kavram DOI'si **10.5281/zenodo.20289687**, v4.0.0 sürüm DOI'si **10.5281/zenodo.20789730** olarak kayıtlıdır.
+[`CITATION.cff`](./CITATION.cff) dosyasındaki makinece okunabilir kaydı ya da GitHub atıf arayüzünü kullanın. Zenodo kavram DOI'si **10.5281/zenodo.20289687** en son arşivlenen sürüme çözülür. Sürüm başına DOI'ler [`CITATION.cff`](./CITATION.cff) dosyasında listelenir.
 
 ## Katkı
 

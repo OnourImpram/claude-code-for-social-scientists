@@ -1,12 +1,12 @@
 # Roadmap
 
-<!-- release-facts: version=4.0.0 booklets=33 language_files=66 categories=14 skills=32 verified=566 fabricated=0 -->
+<!-- release-facts: version=5.0.0 booklets=33 language_files=66 categories=14 skills=32 verified=566 fabricated=0 -->
 
 This roadmap describes the public development direction of `OnourImpram/claude-code-for-social-scientists`. Dates are planning targets rather than commitments. Repository claims are limited to capabilities that are implemented, reachable, and tested.
 
 ## Current baseline
 
-The current release metadata is v4.0.0, dated 2026-06-22. The repository contains thirty three released bilingual booklets, sixty six language files, fourteen categories, thirty two reviewed skills, 566 verified citation declarations, and zero fabricated citation declarations.
+The current release metadata is v5.0.0, dated 2026-07-26. The repository contains thirty three released bilingual booklets, sixty six language files, fourteen categories, thirty two reviewed skills, 566 verified citation declarations, and zero fabricated citation declarations.
 
 The v4 platform line adds a safe cross client installer, Claude Code and Codex skill discovery paths, ownership manifests, reviewable upgrades, recoverable removal, release truth validation, immutable GitHub Action pins, and a canonical Social Scientist Agent with host specific adapters.
 

@@ -17,6 +17,12 @@ Claude Code for Social Scientists installs 32 narrow research skills into Claude
 
 <!-- DEMO-SLOT -->
 
+<p align="center">
+  <img src="./assets/demo-doi-check.svg" width="830" alt="Terminal output of npm run check-dois in this repository. The DOI liveness checker resolves 142 unique DOIs against the doi.org handle system and reports 142 alive, 0 transient or unverified, and 0 dead.">
+</p>
+
+<p align="center"><em>The project holds itself to the standard it teaches. Every DOI cited in the curriculum is resolved against doi.org on a schedule; a dead one turns the run red. <a href="./scripts/check-dois.mjs">See the checker</a>.</em></p>
+
 > **What this looks like in a session.**
 >
 > *You:* Check every reference in chapter 3 against Crossref and tell me which ones you could not resolve.

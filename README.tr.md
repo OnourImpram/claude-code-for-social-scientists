@@ -15,6 +15,14 @@ Proje, klinik psikolog, doktora sonrası araştırmacı ve yapay zekâ araştır
 
 > **English readers.** The complete English introduction is in [`README.md`](./README.md). Every released booklet contains `tr.md` and `en.md` together.
 
+<!-- DEMO-SLOT -->
+
+<p align="center">
+  <img src="./assets/demo-doi-check.svg" width="830" alt="Depoda npm run check-dois komutunun çıktısı. DOI canlılık denetçisi 142 benzersiz DOI'yi doi.org üzerinden çözümlüyor ve 142 canlı, 0 geçici veya doğrulanmamış, 0 ölü sonucunu bildiriyor.">
+</p>
+
+<p align="center"><em>Proje, öğrettiği ölçütü kendine de uyguluyor. Eğitim programında anılan her DOI zamanlanmış bir koşumda doi.org üzerinden çözümleniyor; ölü bir DOI koşumu kırmızıya çeviriyor ve bir insan devreye giriyor. <a href="./scripts/check-dois.mjs">Denetçinin kendisi</a>.</em></p>
+
 ## Projenin sundukları
 
 1. Sosyal bilim araştırma yaşam döngüsünü kapsayan iki dilli eğitim programı.

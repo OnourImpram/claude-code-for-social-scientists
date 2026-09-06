@@ -280,6 +280,24 @@ function validateMirrors(release, platform) {
     }
   }
 
+  // A marker can be correct while the prose beside it names a release that
+  // shipped two versions ago. That is exactly how paper/paper.md went stale:
+  // its release-facts marker said 5.0.0 and the sentence under it said 4.0.0,
+  // and nothing measured the sentence. Any three-part version written out in
+  // prose in these files must be the current release. Two-part numbers are
+  // left alone on purpose, so "Apache 2.0" and "CC BY-NC-SA 4.0" do not trip.
+  const prosePattern = /(?:[Vv]ersion|[Ss]ürüm)\s+(\d+\.\d+\.\d+)/gu;
+  for (const relative of releaseFiles) {
+    for (const match of read(relative).matchAll(prosePattern)) {
+      if (match[1] !== release.version) {
+        fail(
+          `${relative} names version ${match[1]} in prose, but the current ` +
+            `release is ${release.version}`,
+        );
+      }
+    }
+  }
+
   const readmeLead = read("README.md").split(/^---$/mu)[0];
   const readmeTrLead = read("README.tr.md").split(/^---$/mu)[0];
   if (!readmeLead.includes(`v${release.version}`)) {

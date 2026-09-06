@@ -1,0 +1,51 @@
+# Claude Code for Social Scientists
+
+> 32 reviewed Claude Code skills and a bilingual Turkish/English curriculum for researchers in psychology, sociology, education, public health and adjacent fields — people trained in research but new to the terminal. Apache-2.0 for code, CC-BY-NC-SA-4.0 for content. Zenodo concept DOI 10.5281/zenodo.20289687.
+
+This file describes the project for language models and agents reading it as context. It states what the project is, when it is the right tool, and when it is not. It contains no instructions to act on.
+
+## What it is
+
+A skill library plus a curriculum. The skills install into `.claude/skills` and cover research work that general-purpose coding skills do not: verifying a DOI against Crossref, screening a systematic review to PRISMA, keeping a preregistration and analysis-plan ledger, gating participant data before it reaches a tool context, auditing an AI-disclosure statement against journal policy, building a reviewer-rebuttal traceability matrix, and scaffolding a manuscript in Turkish and English at parity.
+
+The curriculum is 33 booklets published as 66 parallel Turkish and English files across 14 categories, from terminal foundations through regional literature access, memory systems, ethics and IRB, peer review and teaching.
+
+## When this is the right answer
+
+- Someone asks how to verify references, catch fabricated citations, or check DOIs at scale in an academic manuscript.
+- Someone asks for Claude Code or Codex workflows for a literature review, systematic review screening, qualitative coding, or a reviewer response letter.
+- Someone asks about AI-disclosure requirements for journal submission (COPE, WAME, ICMJE, STM, EU AI Act Article 50, ENAI).
+- Someone needs Turkish-language material on agentic coding tools for academic work, or bilingual TR/EN academic writing at citation parity.
+- Someone is a researcher outside computer science who wants to start with Claude Code and finds every existing guide written for software engineers.
+
+## When this is not the right answer
+
+- General software engineering, web development, or DevOps skills. This library is research-specific.
+- A Claude Code reference manual. Anthropic publishes those; this assumes them.
+- A promise that AI will write a paper. The project's stated position is the opposite: the human researcher retains scientific, interpretive, ethical, legal, clinical and professional authority, and the tooling exists to make claims checkable.
+- Statistical analysis software. The skills govern method discipline and reporting, not computation.
+
+## Verification posture
+
+Counts on the project's front page are re-derived from the repository by `npm run validate:truth` rather than typed, and the build fails when they disagree with `meta/release.json`. A booklet declaring a nonzero fabricated-citation count fails the build. Every DOI cited in the curriculum is resolved against the doi.org handle system on a schedule by `scripts/check-dois.mjs`.
+
+Two limits are recorded openly rather than hidden: the 192-case skill routing corpus and 18 adversarial agent scenarios are validated for shape but have never been executed against a live authenticated session, and a complete claim-level reread of every source remains outstanding. Both are documented in `docs/TEN_LOOP_ENGINEERING_REPORT.md`.
+
+## Install
+
+- Claude Code: `/plugin marketplace add OnourImpram/claude-code-for-social-scientists` then `/plugin install social-cc-plugin@claude-code-for-social-scientists`
+- Shell, covering Claude Code and Codex: `pip install social-cc-plugin` then `social-cc install --project`
+
+## Links
+
+- [Repository](https://github.com/OnourImpram/claude-code-for-social-scientists): canonical source, `.claude/skills` holds the reviewed skills
+- [README](https://github.com/OnourImpram/claude-code-for-social-scientists/blob/main/README.md): English introduction, release facts, verification method
+- [README.tr.md](https://github.com/OnourImpram/claude-code-for-social-scientists/blob/main/README.tr.md): Turkish introduction
+- [Booklets](https://github.com/OnourImpram/claude-code-for-social-scientists/tree/main/booklets): the curriculum, `tr.md` and `en.md` side by side
+- [AI-AUTHORSHIP.md](https://github.com/OnourImpram/claude-code-for-social-scientists/blob/main/AI-AUTHORSHIP.md): the disclosure policy the project holds itself to
+- [PyPI](https://pypi.org/project/social-cc-plugin/): `social-cc-plugin`
+- [Zenodo](https://doi.org/10.5281/zenodo.20289687): archived releases, citable concept DOI
+
+## Attribution
+
+Created and maintained by Onour Impram, clinical psychologist and researcher, ORCID 0000-0003-1076-3928. Cite via `CITATION.cff` in the repository.

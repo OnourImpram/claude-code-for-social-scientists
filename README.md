@@ -29,6 +29,15 @@ Claude Code for Social Scientists installs 32 narrow research skills into Claude
 >
 > *[`apa-doi-verifier`](./.claude/skills/apa-doi-verifier/SKILL.md):* one row per reference, with source type, DOI status, metadata status, and a fabricated citation risk rating; then corrected APA 7 entries for the references that resolved, and a separate list of the ones that did not. The skill's instructions forbid repairing an unresolved DOI by guesswork, so an unresolved reference comes back marked unresolved rather than filled in.
 
+Inside Claude Code:
+
+```text
+/plugin marketplace add OnourImpram/claude-code-for-social-scientists
+/plugin install social-cc-plugin@claude-code-for-social-scientists
+```
+
+Or from a shell, which also covers Codex:
+
 ```bash
 pip install social-cc-plugin
 social-cc install --project    # copies the 32 skills into ./.claude/skills
